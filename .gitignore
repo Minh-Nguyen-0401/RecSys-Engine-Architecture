@@ -1,0 +1,10 @@
+**/*.parquet
+**/*.csv
+**/*.npz
+
+**/model/
+**/model_weights*
+
+**/__pycache__/
+
+**/*test*.ipynb

@@ -1,0 +1,12 @@
+2025-06-22 17:37:59.723078: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+[2025-06-22 17:38:09,231] WARNING:tensorflow: From C:\Users\ACER\anaconda3\Lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+[2025-06-22 17:38:10,418] INFO:__main__: Starting training pipeline...
+[2025-06-22 17:38:10,418] INFO:src.data: Loading data...
+[2025-06-22 17:38:10,419] INFO:src.data: Reading cached parquets: D:\Study\UNIVERSITY\THIRD YEAR\Business Analytics\final assignment\hm-two-step-reco\two-tower-cg\refactor\output\parquet\train.parquet, D:\Study\UNIVERSITY\THIRD YEAR\Business Analytics\final assignment\hm-two-step-reco\two-tower-cg\refactor\output\parquet\val.parquet
+forrtl: error (200): program aborting due to control-C event
+Image              PC                Routine            Line        Source             
+libifcoremd.dll    00007FF99C02DF54  Unknown               Unknown  Unknown
+KERNELBASE.dll     00007FFA8339B71D  Unknown               Unknown  Unknown
+KERNEL32.DLL       00007FFA84C0E8D7  Unknown               Unknown  Unknown
+ntdll.dll          00007FFA85E3C34C  Unknown               Unknown  Unknown

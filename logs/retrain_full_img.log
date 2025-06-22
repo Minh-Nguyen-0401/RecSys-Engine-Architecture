@@ -1,0 +1,263 @@
+2025-06-22 13:12:27.263012: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+[2025-06-22 13:12:37,571] WARNING:tensorflow: From C:\Users\ACER\anaconda3\Lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+[2025-06-22 13:12:38,835] INFO:__main__: Starting training pipeline...
+[2025-06-22 13:12:38,835] INFO:src.data: Loading data...
+[2025-06-22 13:12:38,835] INFO:src.data: Reading cached articles parquet: D:\Study\UNIVERSITY\THIRD YEAR\Business Analytics\final assignment\hm-two-step-reco\two-tower-cg\refactor\output\parquet\articles.parquet
+[2025-06-22 13:12:39,619] INFO:src.data: Reading cached customers parquet: D:\Study\UNIVERSITY\THIRD YEAR\Business Analytics\final assignment\hm-two-step-reco\two-tower-cg\refactor\output\parquet\customers.parquet
+[2025-06-22 13:12:43,058] INFO:src.data: Reading cached parquet: D:\Study\UNIVERSITY\THIRD YEAR\Business Analytics\final assignment\hm-two-step-reco\two-tower-cg\refactor\output\parquet\raw_transactions.parquet
+[2025-06-22 13:15:42,830] INFO:src.data: Downcasted price to float32.
+[2025-06-22 13:15:43,296] INFO:src.data: Downcasted img_embd_0 to float32.
+[2025-06-22 13:15:43,718] INFO:src.data: Downcasted img_embd_1 to float32.
+[2025-06-22 13:15:44,149] INFO:src.data: Downcasted img_embd_2 to float32.
+[2025-06-22 13:15:44,638] INFO:src.data: Downcasted img_embd_3 to float32.
+[2025-06-22 13:15:45,137] INFO:src.data: Downcasted img_embd_4 to float32.
+[2025-06-22 13:15:45,562] INFO:src.data: Downcasted img_embd_5 to float32.
+[2025-06-22 13:15:46,066] INFO:src.data: Downcasted img_embd_6 to float32.
+[2025-06-22 13:15:46,554] INFO:src.data: Downcasted img_embd_7 to float32.
+[2025-06-22 13:15:47,099] INFO:src.data: Downcasted img_embd_8 to float32.
+[2025-06-22 13:15:47,555] INFO:src.data: Downcasted img_embd_9 to float32.
+[2025-06-22 13:15:48,098] INFO:src.data: Downcasted img_embd_10 to float32.
+[2025-06-22 13:15:48,629] INFO:src.data: Downcasted img_embd_11 to float32.
+[2025-06-22 13:15:49,316] INFO:src.data: Downcasted img_embd_12 to float32.
+[2025-06-22 13:15:49,903] INFO:src.data: Downcasted img_embd_13 to float32.
+[2025-06-22 13:15:50,668] INFO:src.data: Downcasted img_embd_14 to float32.
+[2025-06-22 13:15:51,293] INFO:src.data: Downcasted img_embd_15 to float32.
+[2025-06-22 13:15:51,818] INFO:src.data: Downcasted img_embd_16 to float32.
+[2025-06-22 13:15:52,457] INFO:src.data: Downcasted img_embd_17 to float32.
+[2025-06-22 13:15:52,937] INFO:src.data: Downcasted img_embd_18 to float32.
+[2025-06-22 13:15:53,530] INFO:src.data: Downcasted img_embd_19 to float32.
+[2025-06-22 13:15:54,003] INFO:src.data: Downcasted img_embd_20 to float32.
+[2025-06-22 13:15:54,455] INFO:src.data: Downcasted img_embd_21 to float32.
+[2025-06-22 13:15:55,011] INFO:src.data: Downcasted img_embd_22 to float32.
+[2025-06-22 13:15:55,576] INFO:src.data: Downcasted img_embd_23 to float32.
+[2025-06-22 13:15:56,060] INFO:src.data: Downcasted img_embd_24 to float32.
+[2025-06-22 13:15:56,518] INFO:src.data: Downcasted img_embd_25 to float32.
+[2025-06-22 13:15:57,027] INFO:src.data: Downcasted img_embd_26 to float32.
+[2025-06-22 13:15:57,663] INFO:src.data: Downcasted img_embd_27 to float32.
+[2025-06-22 13:15:58,354] INFO:src.data: Downcasted img_embd_28 to float32.
+[2025-06-22 13:15:58,854] INFO:src.data: Downcasted img_embd_29 to float32.
+[2025-06-22 13:15:59,581] INFO:src.data: Downcasted img_embd_30 to float32.
+[2025-06-22 13:16:00,159] INFO:src.data: Downcasted img_embd_31 to float32.
+[2025-06-22 13:16:00,590] INFO:src.data: Downcasted img_embd_32 to float32.
+[2025-06-22 13:16:01,134] INFO:src.data: Downcasted img_embd_33 to float32.
+[2025-06-22 13:16:01,747] INFO:src.data: Downcasted img_embd_34 to float32.
+[2025-06-22 13:16:02,067] INFO:src.data: Downcasted img_embd_35 to float32.
+[2025-06-22 13:16:03,118] INFO:src.data: Downcasted img_embd_36 to float32.
+[2025-06-22 13:16:03,451] INFO:src.data: Downcasted img_embd_37 to float32.
+[2025-06-22 13:16:03,716] INFO:src.data: Downcasted img_embd_38 to float32.
+[2025-06-22 13:16:03,954] INFO:src.data: Downcasted img_embd_39 to float32.
+[2025-06-22 13:16:04,171] INFO:src.data: Downcasted img_embd_40 to float32.
+[2025-06-22 13:16:04,365] INFO:src.data: Downcasted img_embd_41 to float32.
+[2025-06-22 13:16:04,578] INFO:src.data: Downcasted img_embd_42 to float32.
+[2025-06-22 13:16:04,837] INFO:src.data: Downcasted img_embd_43 to float32.
+[2025-06-22 13:16:05,118] INFO:src.data: Downcasted img_embd_44 to float32.
+[2025-06-22 13:16:06,197] INFO:src.data: Downcasted img_embd_45 to float32.
+[2025-06-22 13:16:06,831] INFO:src.data: Downcasted img_embd_46 to float32.
+[2025-06-22 13:16:07,064] INFO:src.data: Downcasted img_embd_47 to float32.
+[2025-06-22 13:16:07,290] INFO:src.data: Downcasted img_embd_48 to float32.
+[2025-06-22 13:16:07,497] INFO:src.data: Downcasted img_embd_49 to float32.
+[2025-06-22 13:16:07,716] INFO:src.data: Downcasted img_embd_50 to float32.
+[2025-06-22 13:16:08,325] INFO:src.data: Downcasted img_embd_51 to float32.
+[2025-06-22 13:16:08,569] INFO:src.data: Downcasted img_embd_52 to float32.
+[2025-06-22 13:16:08,863] INFO:src.data: Downcasted img_embd_53 to float32.
+[2025-06-22 13:16:09,181] INFO:src.data: Downcasted img_embd_54 to float32.
+[2025-06-22 13:16:09,471] INFO:src.data: Downcasted img_embd_55 to float32.
+[2025-06-22 13:16:09,752] INFO:src.data: Downcasted img_embd_56 to float32.
+[2025-06-22 13:16:10,256] INFO:src.data: Downcasted img_embd_57 to float32.
+[2025-06-22 13:16:11,427] INFO:src.data: Downcasted img_embd_58 to float32.
+[2025-06-22 13:16:12,144] INFO:src.data: Downcasted img_embd_59 to float32.
+[2025-06-22 13:16:12,570] INFO:src.data: Downcasted img_embd_60 to float32.
+[2025-06-22 13:16:13,066] INFO:src.data: Downcasted img_embd_61 to float32.
+[2025-06-22 13:16:13,554] INFO:src.data: Downcasted img_embd_62 to float32.
+[2025-06-22 13:16:14,068] INFO:src.data: Downcasted img_embd_63 to float32.
+[2025-06-22 13:16:14,563] INFO:src.data: Downcasted img_embd_64 to float32.
+[2025-06-22 13:16:15,024] INFO:src.data: Downcasted img_embd_65 to float32.
+[2025-06-22 13:16:15,524] INFO:src.data: Downcasted img_embd_66 to float32.
+[2025-06-22 13:16:16,249] INFO:src.data: Downcasted img_embd_67 to float32.
+[2025-06-22 13:16:17,110] INFO:src.data: Downcasted img_embd_68 to float32.
+[2025-06-22 13:16:17,600] INFO:src.data: Downcasted img_embd_69 to float32.
+[2025-06-22 13:16:18,176] INFO:src.data: Downcasted img_embd_70 to float32.
+[2025-06-22 13:16:18,953] INFO:src.data: Downcasted img_embd_71 to float32.
+[2025-06-22 13:16:19,526] INFO:src.data: Downcasted img_embd_72 to float32.
+[2025-06-22 13:16:20,035] INFO:src.data: Downcasted img_embd_73 to float32.
+[2025-06-22 13:16:20,647] INFO:src.data: Downcasted img_embd_74 to float32.
+[2025-06-22 13:16:21,351] INFO:src.data: Downcasted img_embd_75 to float32.
+[2025-06-22 13:16:22,419] INFO:src.data: Downcasted img_embd_76 to float32.
+[2025-06-22 13:16:23,889] INFO:src.data: Downcasted img_embd_77 to float32.
+[2025-06-22 13:16:25,182] INFO:src.data: Downcasted img_embd_78 to float32.
+[2025-06-22 13:16:26,116] INFO:src.data: Downcasted img_embd_79 to float32.
+[2025-06-22 13:16:26,925] INFO:src.data: Downcasted img_embd_80 to float32.
+[2025-06-22 13:16:27,916] INFO:src.data: Downcasted img_embd_81 to float32.
+[2025-06-22 13:16:28,648] INFO:src.data: Downcasted img_embd_82 to float32.
+[2025-06-22 13:16:29,555] INFO:src.data: Downcasted img_embd_83 to float32.
+[2025-06-22 13:16:30,378] INFO:src.data: Downcasted img_embd_84 to float32.
+[2025-06-22 13:16:31,205] INFO:src.data: Downcasted img_embd_85 to float32.
+[2025-06-22 13:16:31,922] INFO:src.data: Downcasted img_embd_86 to float32.
+[2025-06-22 13:16:32,553] INFO:src.data: Downcasted img_embd_87 to float32.
+[2025-06-22 13:16:33,123] INFO:src.data: Downcasted img_embd_88 to float32.
+[2025-06-22 13:16:33,759] INFO:src.data: Downcasted img_embd_89 to float32.
+[2025-06-22 13:16:34,306] INFO:src.data: Downcasted img_embd_90 to float32.
+[2025-06-22 13:16:34,967] INFO:src.data: Downcasted img_embd_91 to float32.
+[2025-06-22 13:16:35,709] INFO:src.data: Downcasted img_embd_92 to float32.
+[2025-06-22 13:16:36,317] INFO:src.data: Downcasted img_embd_93 to float32.
+[2025-06-22 13:16:36,918] INFO:src.data: Downcasted img_embd_94 to float32.
+[2025-06-22 13:16:37,588] INFO:src.data: Downcasted img_embd_95 to float32.
+[2025-06-22 13:16:38,231] INFO:src.data: Downcasted img_embd_96 to float32.
+[2025-06-22 13:16:38,719] INFO:src.data: Downcasted img_embd_97 to float32.
+[2025-06-22 13:16:39,553] INFO:src.data: Downcasted img_embd_98 to float32.
+[2025-06-22 13:16:40,642] INFO:src.data: Downcasted img_embd_99 to float32.
+[2025-06-22 13:16:41,287] INFO:src.data: Downcasted img_embd_100 to float32.
+[2025-06-22 13:16:41,843] INFO:src.data: Downcasted img_embd_101 to float32.
+[2025-06-22 13:16:42,251] INFO:src.data: Downcasted img_embd_102 to float32.
+[2025-06-22 13:16:42,653] INFO:src.data: Downcasted img_embd_103 to float32.
+[2025-06-22 13:16:43,151] INFO:src.data: Downcasted img_embd_104 to float32.
+[2025-06-22 13:16:43,563] INFO:src.data: Downcasted img_embd_105 to float32.
+[2025-06-22 13:16:44,486] INFO:src.data: Downcasted img_embd_106 to float32.
+[2025-06-22 13:16:45,130] INFO:src.data: Downcasted img_embd_107 to float32.
+[2025-06-22 13:16:45,685] INFO:src.data: Downcasted img_embd_108 to float32.
+[2025-06-22 13:16:46,627] INFO:src.data: Downcasted img_embd_109 to float32.
+[2025-06-22 13:16:47,301] INFO:src.data: Downcasted img_embd_110 to float32.
+[2025-06-22 13:16:48,415] INFO:src.data: Downcasted img_embd_111 to float32.
+[2025-06-22 13:16:49,846] INFO:src.data: Downcasted img_embd_112 to float32.
+[2025-06-22 13:16:50,599] INFO:src.data: Downcasted img_embd_113 to float32.
+[2025-06-22 13:16:51,195] INFO:src.data: Downcasted img_embd_114 to float32.
+[2025-06-22 13:16:52,005] INFO:src.data: Downcasted img_embd_115 to float32.
+[2025-06-22 13:16:52,710] INFO:src.data: Downcasted img_embd_116 to float32.
+[2025-06-22 13:16:53,768] INFO:src.data: Downcasted img_embd_117 to float32.
+[2025-06-22 13:16:55,915] INFO:src.data: Downcasted img_embd_118 to float32.
+[2025-06-22 13:16:56,977] INFO:src.data: Downcasted img_embd_119 to float32.
+[2025-06-22 13:16:57,748] INFO:src.data: Downcasted img_embd_120 to float32.
+[2025-06-22 13:16:58,434] INFO:src.data: Downcasted img_embd_121 to float32.
+[2025-06-22 13:16:59,247] INFO:src.data: Downcasted img_embd_122 to float32.
+[2025-06-22 13:16:59,897] INFO:src.data: Downcasted img_embd_123 to float32.
+[2025-06-22 13:17:01,134] INFO:src.data: Downcasted img_embd_124 to float32.
+[2025-06-22 13:17:02,554] INFO:src.data: Downcasted img_embd_125 to float32.
+[2025-06-22 13:17:03,500] INFO:src.data: Downcasted img_embd_126 to float32.
+[2025-06-22 13:17:05,306] INFO:src.data: Downcasted img_embd_127 to float32.
+[2025-06-22 13:17:13,536] INFO:src.features: Adding rolling features...
+[2025-06-22 13:17:13,537] INFO:src.features: Starting feature engineering with daily aggregation and memory optimization...
+[2025-06-22 13:17:30,566] INFO:src.features: Calculating rolling features for customers...
+[2025-06-22 13:21:02,535] INFO:src.features: Rolling features added successfully.
+[2025-06-22 13:21:02,535] INFO:src.features: Calculating rolling popularity features for articles...
+[2025-06-22 13:21:31,807] INFO:src.features: Calculating time-delta features...
+[2025-06-22 13:21:48,252] INFO:src.features: Cleaning up final dataset and optimizing memory...
+[2025-06-22 13:22:00,994] INFO:src.features: Feature engineering completed successfully.
+[2025-06-22 13:22:01,402] INFO:src.data: Splitting dataset by date ranges …
+[2025-06-22 13:27:00,431] INFO:src.data: Train:9755308  Val:1262750
+[2025-06-22 13:27:10,802] INFO:src.preprocess: Starting preprocessing...
+[2025-06-22 13:27:12,026] WARNING:tensorflow: From C:\Users\ACER\anaconda3\Lib\site-packages\keras\src\backend.py:873: The name tf.get_default_graph is deprecated. Please use tf.compat.v1.get_default_graph instead.
+
+2025-06-22 13:27:12.132615: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE SSE2 SSE3 SSE4.1 SSE4.2 AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+[2025-06-22 13:27:35,727] INFO:src.preprocess: Built 15 lookups for categorical variables.
+[2025-06-22 13:27:35,728] INFO:src.preprocess: Creating TensorFlow datasets for train, validation sets...
+[2025-06-22 13:28:20,916] WARNING:tensorflow: From C:\Users\ACER\anaconda3\Lib\site-packages\keras\src\utils\tf_utils.py:492: The name tf.ragged.RaggedTensorValue is deprecated. Please use tf.compat.v1.ragged.RaggedTensorValue instead.
+
+[2025-06-22 13:28:29,973] INFO:src.preprocess: TensorFlow datasets created.
+[2025-06-22 13:28:29,974] INFO:src.preprocess: Building all_articles tensor for inference...
+[2025-06-22 13:30:38,112] INFO:src.preprocess: all_articles tensor built successfully.
+[2025-06-22 13:30:38,114] INFO:src.preprocess: Calculating label probabilities for log(q) correction...
+[2025-06-22 13:30:41,168] INFO:src.preprocess: Label probabilities calculated.
+[2025-06-22 13:30:41,168] INFO:src.preprocess: Preprocessing finished.
+[2025-06-22 13:30:41,232] INFO:src.train: Building the two-tower model...
+[2025-06-22 13:30:41,321] INFO:src.single_tower_model: Initializing SingleTowerModel for categorical features: ['customer_id', 'FN', 'Active', 'club_member_status', 'fashion_news_frequency', 'age_interval', 'postal_code'] and numerical features: ListWrapper(['customer_daily_spend', 'customer_daily_articles', 'customer_spend_30d', 'customer_articles_30d', 'days_since_last_customer_trans'])
+[2025-06-22 13:30:41,404] INFO:src.single_tower_model: Initializing SingleTowerModel for categorical features: ['article_id', 'product_type_name', 'product_group_name', 'colour_group_name', 'department_name', 'index_name', 'section_name', 'garment_group_name'] and numerical features: ListWrapper(['color_daily_sales', 'color_popularity_30d', 'prod_type_daily_sales', 'product_type_popularity_30d', 'days_since_last_article_trans', 'img_embd_0', 'img_embd_1', 'img_embd_2', 'img_embd_3', 'img_embd_4', 'img_embd_5', 'img_embd_6', 'img_embd_7', 'img_embd_8', 'img_embd_9', 'img_embd_10', 'img_embd_11', 'img_embd_12', 'img_embd_13', 'img_embd_14', 'img_embd_15', 'img_embd_16', 'img_embd_17', 'img_embd_18', 'img_embd_19', 'img_embd_20', 'img_embd_21', 'img_embd_22', 'img_embd_23', 'img_embd_24', 'img_embd_25', 'img_embd_26', 'img_embd_27', 'img_embd_28', 'img_embd_29', 'img_embd_30', 'img_embd_31', 'img_embd_32', 'img_embd_33', 'img_embd_34', 'img_embd_35', 'img_embd_36', 'img_embd_37', 'img_embd_38', 'img_embd_39', 'img_embd_40', 'img_embd_41', 'img_embd_42', 'img_embd_43', 'img_embd_44', 'img_embd_45', 'img_embd_46', 'img_embd_47', 'img_embd_48', 'img_embd_49', 'img_embd_50', 'img_embd_51', 'img_embd_52', 'img_embd_53', 'img_embd_54', 'img_embd_55', 'img_embd_56', 'img_embd_57', 'img_embd_58', 'img_embd_59', 'img_embd_60', 'img_embd_61', 'img_embd_62', 'img_embd_63', 'img_embd_64', 'img_embd_65', 'img_embd_66', 'img_embd_67', 'img_embd_68', 'img_embd_69', 'img_embd_70', 'img_embd_71', 'img_embd_72', 'img_embd_73', 'img_embd_74', 'img_embd_75', 'img_embd_76', 'img_embd_77', 'img_embd_78', 'img_embd_79', 'img_embd_80', 'img_embd_81', 'img_embd_82', 'img_embd_83', 'img_embd_84', 'img_embd_85', 'img_embd_86', 'img_embd_87', 'img_embd_88', 'img_embd_89', 'img_embd_90', 'img_embd_91', 'img_embd_92', 'img_embd_93', 'img_embd_94', 'img_embd_95', 'img_embd_96', 'img_embd_97', 'img_embd_98', 'img_embd_99', 'img_embd_100', 'img_embd_101', 'img_embd_102', 'img_embd_103', 'img_embd_104', 'img_embd_105', 'img_embd_106', 'img_embd_107', 'img_embd_108', 'img_embd_109', 'img_embd_110', 'img_embd_111', 'img_embd_112', 'img_embd_113', 'img_embd_114', 'img_embd_115', 'img_embd_116', 'img_embd_117', 'img_embd_118', 'img_embd_119', 'img_embd_120', 'img_embd_121', 'img_embd_122', 'img_embd_123', 'img_embd_124', 'img_embd_125', 'img_embd_126', 'img_embd_127'])
+[2025-06-22 13:30:41,437] INFO:src.model: Initializing Basic2TowerModel...
+[2025-06-22 13:30:42,580] INFO:src.custom_cross_entropy_loss: Initializing CustomCrossEntropyLoss...
+[2025-06-22 13:30:42,586] INFO:src.train: Two-tower model built successfully.
+[2025-06-22 13:30:42,590] INFO:src.train: Starting model training...
+[2025-06-22 13:30:42,618] INFO:src.custom_recall: Initializing CustomRecall(k=100)...
+[2025-06-22 13:30:42,621] INFO:src.custom_recall: Initializing CustomRecall(k=500)...
+[2025-06-22 13:30:42,624] INFO:src.custom_recall: Initializing CustomRecall(k=1000)...
+Epoch 1/4
+2025-06-22 13:31:01.179556: W tensorflow/core/grappler/optimizers/loop_optimizer.cc:933] Skipping loop optimization for Merge node with control input: custom_cross_entropy_loss/cond/branch_executed/_14
+2025-06-22 13:31:12.659529: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:422] ShuffleDatasetV3:1: Filling up shuffle buffer (this may take a while): 11800 of 100000
+2025-06-22 13:31:23.791360: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:422] ShuffleDatasetV3:1: Filling up shuffle buffer (this may take a while): 11883 of 100000
+2025-06-22 13:31:42.135386: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:422] ShuffleDatasetV3:1: Filling up shuffle buffer (this may take a while): 15312 of 100000
+2025-06-22 13:31:53.260290: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:422] ShuffleDatasetV3:1: Filling up shuffle buffer (this may take a while): 15455 of 100000
+2025-06-22 13:32:11.885873: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:422] ShuffleDatasetV3:1: Filling up shuffle buffer (this may take a while): 17257 of 100000
+2025-06-22 13:32:22.083433: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:422] ShuffleDatasetV3:1: Filling up shuffle buffer (this may take a while): 17426 of 100000
+2025-06-22 13:32:32.178163: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:422] ShuffleDatasetV3:1: Filling up shuffle buffer (this may take a while): 17536 of 100000
+2025-06-22 13:32:42.262551: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:422] ShuffleDatasetV3:1: Filling up shuffle buffer (this may take a while): 17595 of 100000
+2025-06-22 13:32:53.375776: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:422] ShuffleDatasetV3:1: Filling up shuffle buffer (this may take a while): 17784 of 100000
+2025-06-22 13:33:03.521517: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:422] ShuffleDatasetV3:1: Filling up shuffle buffer (this may take a while): 17895 of 100000
+2025-06-22 13:33:23.766245: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:422] ShuffleDatasetV3:1: Filling up shuffle buffer (this may take a while): 18285 of 100000
+2025-06-22 13:33:34.898761: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:422] ShuffleDatasetV3:1: Filling up shuffle buffer (this may take a while): 18378 of 100000
+2025-06-22 13:33:53.065740: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:422] ShuffleDatasetV3:1: Filling up shuffle buffer (this may take a while): 18406 of 100000
+2025-06-22 13:34:10.267152: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:422] ShuffleDatasetV3:1: Filling up shuffle buffer (this may take a while): 18589 of 100000
+2025-06-22 13:34:30.495363: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:422] ShuffleDatasetV3:1: Filling up shuffle buffer (this may take a while): 18887 of 100000
+2025-06-22 13:34:42.143496: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:422] ShuffleDatasetV3:1: Filling up shuffle buffer (this may take a while): 21744 of 100000
+2025-06-22 13:34:52.452558: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:422] ShuffleDatasetV3:1: Filling up shuffle buffer (this may take a while): 39503 of 100000
+2025-06-22 13:35:12.457300: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:422] ShuffleDatasetV3:1: Filling up shuffle buffer (this may take a while): 51948 of 100000
+2025-06-22 13:35:22.685660: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:422] ShuffleDatasetV3:1: Filling up shuffle buffer (this may take a while): 52263 of 100000
+2025-06-22 13:35:42.632949: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:422] ShuffleDatasetV3:1: Filling up shuffle buffer (this may take a while): 81540 of 100000
+2025-06-22 13:35:52.748289: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:422] ShuffleDatasetV3:1: Filling up shuffle buffer (this may take a while): 81782 of 100000
+2025-06-22 13:36:03.853919: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:422] ShuffleDatasetV3:1: Filling up shuffle buffer (this may take a while): 81835 of 100000
+2025-06-22 13:36:21.991456: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:422] ShuffleDatasetV3:1: Filling up shuffle buffer (this may take a while): 81936 of 100000
+2025-06-22 13:36:32.088958: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:422] ShuffleDatasetV3:1: Filling up shuffle buffer (this may take a while): 81964 of 100000
+2025-06-22 13:36:42.224010: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:422] ShuffleDatasetV3:1: Filling up shuffle buffer (this may take a while): 82464 of 100000
+2025-06-22 13:36:52.331746: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:422] ShuffleDatasetV3:1: Filling up shuffle buffer (this may take a while): 82670 of 100000
+2025-06-22 13:37:02.424532: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:422] ShuffleDatasetV3:1: Filling up shuffle buffer (this may take a while): 82812 of 100000
+2025-06-22 13:37:15.598706: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:422] ShuffleDatasetV3:1: Filling up shuffle buffer (this may take a while): 82909 of 100000
+2025-06-22 13:37:32.728295: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:422] ShuffleDatasetV3:1: Filling up shuffle buffer (this may take a while): 83007 of 100000
+2025-06-22 13:37:52.690791: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:422] ShuffleDatasetV3:1: Filling up shuffle buffer (this may take a while): 88770 of 100000
+2025-06-22 13:38:11.992594: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:422] ShuffleDatasetV3:1: Filling up shuffle buffer (this may take a while): 89732 of 100000
+2025-06-22 13:38:23.097491: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:422] ShuffleDatasetV3:1: Filling up shuffle buffer (this may take a while): 89797 of 100000
+2025-06-22 13:38:44.349546: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:422] ShuffleDatasetV3:1: Filling up shuffle buffer (this may take a while): 90134 of 100000
+2025-06-22 13:39:03.528448: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:422] ShuffleDatasetV3:1: Filling up shuffle buffer (this may take a while): 90249 of 100000
+2025-06-22 13:39:22.716439: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:422] ShuffleDatasetV3:1: Filling up shuffle buffer (this may take a while): 90307 of 100000
+2025-06-22 13:39:33.853350: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:422] ShuffleDatasetV3:1: Filling up shuffle buffer (this may take a while): 90440 of 100000
+2025-06-22 13:39:52.148901: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:422] ShuffleDatasetV3:1: Filling up shuffle buffer (this may take a while): 92099 of 100000
+2025-06-22 13:40:01.409732: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:452] Shuffle buffer filled.
+
+    1/19053 [..............................] - ETA: 2894:53:06 - loss: 4037.2188
+    2/19053 [..............................] - ETA: 23:52 - loss: 4011.0264     
+    3/19053 [..............................] - ETA: 41:24 - loss: 4047.9987
+    4/19053 [..............................] - ETA: 44:32 - loss: 4026.3002
+    5/19053 [..............................] - ETA: 46:04 - loss: 4006.0872
+    6/19053 [..............................] - ETA: 46:14 - loss: 4007.6551
+    7/19053 [..............................] - ETA: 46:45 - loss: 3984.2128
+    8/19053 [..............................] - ETA: 47:00 - loss: 3976.0913
+    9/19053 [..............................] - ETA: 45:07 - loss: 3981.9107
+   10/19053 [..............................] - ETA: 42:55 - loss: 3979.5406
+   11/19053 [..............................] - ETA: 41:02 - loss: 3982.4979
+   12/19053 [..............................] - ETA: 39:37 - loss: 3981.0441
+   13/19053 [..............................] - ETA: 2:52:31 - loss: 3996.8818
+   14/19053 [..............................] - ETA: 6:49:13 - loss: 4007.3717
+   15/19053 [..............................] - ETA: 10:34:58 - loss: 4004.9820
+   16/19053 [..............................] - ETA: 9:55:33 - loss: 4008.6361 
+   17/19053 [..............................] - ETA: 9:21:02 - loss: 4019.2084
+   18/19053 [..............................] - ETA: 8:50:24 - loss: 4018.3774
+   19/19053 [..............................] - ETA: 8:23:18 - loss: 4016.5040
+   20/19053 [..............................] - ETA: 7:59:01 - loss: 4017.3236
+   21/19053 [..............................] - ETA: 7:37:01 - loss: 4019.6584
+   22/19053 [..............................] - ETA: 7:17:09 - loss: 4017.7040
+   23/19053 [..............................] - ETA: 6:59:07 - loss: 4014.6551
+   24/19053 [..............................] - ETA: 6:42:07 - loss: 4016.1012
+   25/19053 [..............................] - ETA: 6:26:09 - loss: 4014.0329
+   26/19053 [..............................] - ETA: 6:37:40 - loss: 4010.6667
+   27/19053 [..............................] - ETA: 8:27:06 - loss: 4004.69422025-06-22 13:40:52.860197: W tensorflow/core/framework/op_kernel.cc:1839] OP_REQUIRES failed at cwise_ops_common.h:321 : RESOURCE_EXHAUSTED: OOM when allocating tensor with shape[215,256] and type float on /job:localhost/replica:0/task:0/device:CPU:0 by allocator mklcpu
+Traceback (most recent call last):
+  File "D:\Study\UNIVERSITY\THIRD YEAR\Business Analytics\final assignment\hm-two-step-reco\two-tower-cg\refactor\__main__.py", line 53, in <module>
+    history = run_all(config)
+              ^^^^^^^^^^^^^^^
+  File "D:\Study\UNIVERSITY\THIRD YEAR\Business Analytics\final assignment\hm-two-step-reco\two-tower-cg\refactor\__main__.py", line 38, in run_all
+    train_history = run_training(model, preprocessed_hm_data, config)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Study\UNIVERSITY\THIRD YEAR\Business Analytics\final assignment\hm-two-step-reco\two-tower-cg\refactor\src\train.py", line 62, in run_training
+    history = model.fit(x=data.train_ds,
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ACER\anaconda3\Lib\site-packages\keras\src\utils\traceback_utils.py", line 70, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\ACER\anaconda3\Lib\site-packages\tensorflow\python\eager\execute.py", line 53, in quick_execute
+    tensors = pywrap_tfe.TFE_Py_Execute(ctx._handle, device_name, op_name,
+  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tensorflow.python.framework.errors_impl.ResourceExhaustedError: Graph execution error:
+
+Detected at node Adagrad/ArithmeticOptimizer/ReplaceMulWithSquare_mul_14 defined at (most recent call last):
+<stack traces unavailable>
+OOM when allocating tensor with shape[215,256] and type float on /job:localhost/replica:0/task:0/device:CPU:0 by allocator mklcpu
+	 [[{{node Adagrad/ArithmeticOptimizer/ReplaceMulWithSquare_mul_14}}]]
+Hint: If you want to see a list of allocated tensors when OOM happens, add report_tensor_allocations_upon_oom to RunOptions for current allocation info. This isn't available when running in Eager mode.
+ [Op:__inference_train_function_5813]

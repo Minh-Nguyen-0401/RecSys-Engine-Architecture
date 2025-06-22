@@ -1,0 +1,46 @@
+2025-06-22 17:26:28.307975: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+[2025-06-22 17:26:33,757] WARNING:tensorflow: From C:\Users\ACER\anaconda3\Lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+[2025-06-22 17:26:34,318] INFO:__main__: Starting training pipeline...
+[2025-06-22 17:26:34,318] INFO:src.data: Loading data...
+[2025-06-22 17:26:34,318] INFO:src.data: Reading cached parquets: D:\Study\UNIVERSITY\THIRD YEAR\Business Analytics\final assignment\hm-two-step-reco\two-tower-cg\refactor\output\parquet\train.parquet, D:\Study\UNIVERSITY\THIRD YEAR\Business Analytics\final assignment\hm-two-step-reco\two-tower-cg\refactor\output\parquet\val.parquet
+[2025-06-22 17:27:14,157] INFO:src.data: Train:7677095  Val:1224824
+[2025-06-22 17:27:14,163] INFO:src.preprocess: Starting preprocessing...
+[2025-06-22 17:27:14,704] WARNING:tensorflow: From C:\Users\ACER\anaconda3\Lib\site-packages\keras\src\backend.py:873: The name tf.get_default_graph is deprecated. Please use tf.compat.v1.get_default_graph instead.
+
+2025-06-22 17:27:14.774594: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE SSE2 SSE3 SSE4.1 SSE4.2 AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+[2025-06-22 17:27:24,163] INFO:src.preprocess: Built 15 lookups for categorical variables.
+[2025-06-22 17:27:24,163] INFO:src.preprocess: Creating TensorFlow datasets for train, validation sets...
+[2025-06-22 17:27:59,626] WARNING:tensorflow: From C:\Users\ACER\anaconda3\Lib\site-packages\keras\src\utils\tf_utils.py:492: The name tf.ragged.RaggedTensorValue is deprecated. Please use tf.compat.v1.ragged.RaggedTensorValue instead.
+
+[2025-06-22 17:28:07,814] INFO:src.preprocess: TensorFlow datasets created.
+[2025-06-22 17:28:07,814] INFO:src.preprocess: Building all_articles tensor for inference...
+[2025-06-22 17:28:25,102] INFO:src.preprocess: all_articles tensor built successfully.
+[2025-06-22 17:28:25,105] INFO:src.preprocess: Calculating label probabilities for log(q) correction...
+[2025-06-22 17:28:26,640] INFO:src.preprocess: Label probabilities calculated.
+[2025-06-22 17:28:26,640] INFO:src.preprocess: Preprocessing finished.
+[2025-06-22 17:28:26,673] INFO:src.train: Building the two-tower model...
+[2025-06-22 17:28:26,736] INFO:src.single_tower_model: Initializing SingleTowerModel for categorical features: ['customer_id', 'FN', 'Active', 'club_member_status', 'fashion_news_frequency', 'age_interval', 'postal_code'] and numerical features: ListWrapper(['customer_daily_spend', 'customer_daily_articles', 'customer_spend_30d', 'customer_articles_30d', 'days_since_last_customer_trans'])
+[2025-06-22 17:28:26,828] INFO:src.single_tower_model: Initializing SingleTowerModel for categorical features: ['article_id', 'product_type_name', 'product_group_name', 'colour_group_name', 'department_name', 'index_name', 'section_name', 'garment_group_name'] and numerical features: ListWrapper(['img_embd_0', 'img_embd_1', 'img_embd_2', 'img_embd_3', 'img_embd_4', 'img_embd_5', 'img_embd_6', 'img_embd_7', 'img_embd_8', 'img_embd_9', 'img_embd_10', 'img_embd_11', 'img_embd_12', 'img_embd_13', 'img_embd_14', 'img_embd_15', 'img_embd_16', 'img_embd_17', 'img_embd_18', 'img_embd_19', 'img_embd_20', 'img_embd_21', 'img_embd_22', 'img_embd_23', 'img_embd_24', 'img_embd_25', 'img_embd_26', 'img_embd_27', 'img_embd_28', 'img_embd_29', 'img_embd_30', 'img_embd_31', 'img_embd_32', 'img_embd_33', 'img_embd_34', 'img_embd_35', 'img_embd_36', 'img_embd_37', 'img_embd_38', 'img_embd_39', 'img_embd_40', 'img_embd_41', 'img_embd_42', 'img_embd_43', 'img_embd_44', 'img_embd_45', 'img_embd_46', 'img_embd_47', 'img_embd_48', 'img_embd_49', 'img_embd_50', 'img_embd_51', 'img_embd_52', 'img_embd_53', 'img_embd_54', 'img_embd_55', 'img_embd_56', 'img_embd_57', 'img_embd_58', 'img_embd_59', 'img_embd_60', 'img_embd_61', 'img_embd_62', 'img_embd_63', 'img_embd_64', 'img_embd_65', 'img_embd_66', 'img_embd_67', 'img_embd_68', 'img_embd_69', 'img_embd_70', 'img_embd_71', 'img_embd_72', 'img_embd_73', 'img_embd_74', 'img_embd_75', 'img_embd_76', 'img_embd_77', 'img_embd_78', 'img_embd_79', 'img_embd_80', 'img_embd_81', 'img_embd_82', 'img_embd_83', 'img_embd_84', 'img_embd_85', 'img_embd_86', 'img_embd_87', 'img_embd_88', 'img_embd_89', 'img_embd_90', 'img_embd_91', 'img_embd_92', 'img_embd_93', 'img_embd_94', 'img_embd_95', 'img_embd_96', 'img_embd_97', 'img_embd_98', 'img_embd_99', 'img_embd_100', 'img_embd_101', 'img_embd_102', 'img_embd_103', 'img_embd_104', 'img_embd_105', 'img_embd_106', 'img_embd_107', 'img_embd_108', 'img_embd_109', 'img_embd_110', 'img_embd_111', 'img_embd_112', 'img_embd_113', 'img_embd_114', 'img_embd_115', 'img_embd_116', 'img_embd_117', 'img_embd_118', 'img_embd_119', 'img_embd_120', 'img_embd_121', 'img_embd_122', 'img_embd_123', 'img_embd_124', 'img_embd_125', 'img_embd_126', 'img_embd_127'])
+[2025-06-22 17:28:26,872] INFO:src.model: Initializing Basic2TowerModel...
+[2025-06-22 17:28:27,933] INFO:src.custom_cross_entropy_loss: Initializing CustomCrossEntropyLoss...
+[2025-06-22 17:28:27,935] INFO:src.train: Two-tower model built successfully.
+[2025-06-22 17:28:27,935] INFO:src.train: Starting model training...
+[2025-06-22 17:28:27,949] INFO:src.custom_recall: Initializing CustomRecall(k=100)...
+[2025-06-22 17:28:27,950] INFO:src.custom_recall: Initializing CustomRecall(k=500)...
+[2025-06-22 17:28:27,952] INFO:src.custom_recall: Initializing CustomRecall(k=1000)...
+[2025-06-22 17:28:27,953] INFO:src.custom_recall: Initializing CustomRecall(k=5000)...
+Epoch 1/4
+2025-06-22 17:28:38.340146: W tensorflow/core/grappler/optimizers/loop_optimizer.cc:933] Skipping loop optimization for Merge node with control input: custom_cross_entropy_loss/cond/branch_executed/_14
+2025-06-22 17:28:48.878709: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:422] ShuffleDatasetV3:1: Filling up shuffle buffer (this may take a while): 65310 of 100000
+2025-06-22 17:28:59.186185: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:422] ShuffleDatasetV3:1: Filling up shuffle buffer (this may take a while): 67168 of 100000
+2025-06-22 17:29:09.461151: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:422] ShuffleDatasetV3:1: Filling up shuffle buffer (this may take a while): 69522 of 100000
+2025-06-22 17:29:19.724805: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:422] ShuffleDatasetV3:1: Filling up shuffle buffer (this may take a while): 70940 of 100000
+2025-06-22 17:29:38.904958: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:422] ShuffleDatasetV3:1: Filling up shuffle buffer (this may take a while): 95467 of 100000
+2025-06-22 17:29:50.052374: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:422] ShuffleDatasetV3:1: Filling up shuffle buffer (this may take a while): 95895 of 100000
+2025-06-22 17:30:09.353680: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:422] ShuffleDatasetV3:1: Filling up shuffle buffer (this may take a while): 97460 of 100000
+2025-06-22 17:30:19.461770: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:422] ShuffleDatasetV3:1: Filling up shuffle buffer (this may take a while): 97812 of 100000
+2025-06-22 17:30:25.680942: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:452] Shuffle buffer filled.
+
+    1/14994 [..............................] - ETA: 483:38:19 - loss: 4106.3149
