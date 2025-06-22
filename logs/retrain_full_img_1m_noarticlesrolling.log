@@ -10160,3 +10160,9 @@ Epoch 4/4
 2025-06-22 23:19:42.062261: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:422] ShuffleDatasetV3:1: Filling up shuffle buffer (this may take a while): 63932 of 100000
 2025-06-22 23:20:02.059821: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:422] ShuffleDatasetV3:1: Filling up shuffle buffer (this may take a while): 88114 of 100000
 2025-06-22 23:20:10.682088: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:452] Shuffle buffer filled.
+
+2601/2601 [==============================] - 3271s 1s/step - loss: 7.4951 - val_loss: 11.5669 - val_recall@100_at_100: 0.0048 - val_recall@500_at_500: 0.0102 - val_recall@1000_at_1000: 0.0132 - val_recall@5000_at_5000: 0.0356
+[2025-06-23 00:08:22,939] INFO:src.train: Model training finished.
+[2025-06-23 00:08:22,949] INFO:src.train: Saving model weights to D:\Study\UNIVERSITY\THIRD YEAR\Business Analytics\final assignment\hm-two-step-reco\two-tower-cg\refactor\output\models\model_v2\model_weights.h5
+[2025-06-23 00:08:23,691] INFO:src.train: Model weights saved successfully.
+[2025-06-23 00:08:30,988] INFO:__main__: Training finished. Results saved to 'history.json'
