@@ -10,8 +10,10 @@ plan.md
 
 **/*test*
 
+!data/test_img.jpg
+!output/
+
 **/*.parquet
-data/**/*.parquet
 **/*.csv
 
 **/model/
