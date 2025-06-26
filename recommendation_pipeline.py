@@ -5,7 +5,6 @@ import os
 import sys
 from pathlib import Path
 
-# Add project directories to the Python path
 HM_TWO_STEP_RECO_DIR = Path(__file__).resolve().parent
 TWO_TOWER_DIR = HM_TWO_STEP_RECO_DIR / 'two_tower_cg' / 'refactor'
 MMOE_RANKER_DIR = HM_TWO_STEP_RECO_DIR / 'mmoe_ranker'
@@ -13,7 +12,6 @@ MMOE_RANKER_DIR = HM_TWO_STEP_RECO_DIR / 'mmoe_ranker'
 sys.path.append(str(TWO_TOWER_DIR))
 sys.path.append(str(MMOE_RANKER_DIR))
 
-# It's better to import the necessary modules after adding to path
 from two_tower_cg.refactor.__inference__ import run_inference as generate_candidates
 from mmoe_ranker.load_data import load_data as mmoe_load_data
 from mmoe_ranker.preprocess import build_lookups, build_normalization_layers, PreprocessedHmData
@@ -32,7 +30,6 @@ from huggingface_hub import PyTorchModelHubMixin
 from torchvision import transforms as v2
 
 
-# Define the same encoder class used for generating the embeddings
 class ImageEncoder(nn.Module, PyTorchModelHubMixin):
     def __init__(self, encoder_config):
         super(ImageEncoder, self).__init__()
@@ -130,7 +127,7 @@ def run_reranking(candidates_df, customer_id_to_rerank: str | None = None):
     print(f"Re-ranking complete. Results saved to {output_path}")
     return reranked_df
 
-def search_by_image(image_path, reranked_df, image_embeddings_df):
+def search_by_image(image_path, reranked_df, image_embeddings_df, threshold = 0.3):
     """Step 3: Search for visually similar articles based on an input image."""
     print("\n--- Running Step 3: Image Search ---")
 
@@ -141,7 +138,7 @@ def search_by_image(image_path, reranked_df, image_embeddings_df):
     encoder_config = SwinConfig.from_pretrained(ckpt)
     image_processor = AutoImageProcessor.from_pretrained(ckpt)
 
-    encoder = ImageEncoder(encoder_config).from_pretrained(ckpt).to(device)
+    encoder = ImageEncoder.from_pretrained(ckpt, encoder_config=encoder_config).to(device)
     encoder.eval()  # Set to evaluation mode
 
     # Define the same image transformations
@@ -168,10 +165,10 @@ def search_by_image(image_path, reranked_df, image_embeddings_df):
 
     feed_embeddings['similarity'] = similarities
 
-    # 4. Sort articles by similarity
-    sorted_articles = feed_embeddings.sort_values(by='similarity', ascending=False)
+    # 4. Filter articles based on threshold
+    final_recommendations = feed_embeddings[feed_embeddings['similarity'] >= threshold].sort_values(by='similarity', ascending=False)
 
-    final_recommendations = sorted_articles[['article_id', 'similarity']]
+    final_recommendations = final_recommendations[['article_id', 'similarity']]
     print("Image search complete.")
     return final_recommendations
 
@@ -192,7 +189,7 @@ if __name__ == '__main__':
     candidates = pd.read_parquet(candidates_path)
     print("Candidates loaded successfully.")
 
-    # Step 2: Re-rank candidates
+    # Step 2: Re-rank candidates for the given customer_id
     reranked_recommendations = run_reranking(candidates, customer_id_to_rerank=args.customer_id)
 
     if reranked_recommendations.empty:
@@ -201,17 +198,19 @@ if __name__ == '__main__':
 
     # Step 3: Perform image search for the first user as an example
     print("\n--- Preparing for Image Search Example ---")
-    example_image_path = HM_TWO_STEP_RECO_DIR / 'data' / 'images' / '010' / '0108775015.jpg'
+    example_image_path = HM_TWO_STEP_RECO_DIR / 'data' / 'test_img.jpg'
     image_embeddings_path = HM_TWO_STEP_RECO_DIR / 'data' / 'image_embeddings.parquet'
 
     if example_image_path.exists() and image_embeddings_path.exists():
         image_embeddings = pd.read_parquet(image_embeddings_path)
         # Get recommendations for the first user for the demo
         if not reranked_recommendations.empty:
-            first_user_recs = reranked_recommendations.head(1)
-            final_recs = search_by_image(str(example_image_path), first_user_recs, image_embeddings)
+            final_recs = search_by_image(str(example_image_path), reranked_recommendations, image_embeddings, threshold=0.2)
             print("\nFinal Recommendations after Image Search:")
             print(final_recs)
+            import json
+            with open(HM_TWO_STEP_RECO_DIR / 'output' / 'final_recs_img_query.json', 'w') as f:
+                json.dump(final_recs.to_dict(), f)
         else:
             print("\nNo re-ranked recommendations generated, skipping image search.")
     else:
