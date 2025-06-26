@@ -48,7 +48,7 @@ if __name__ == '__main__':
     config = Config(embedding_dimension=128,
                     batch_size=512,
                     learning_rate=0.05,
-                    nb_epochs=4,
+                    nb_epochs=2,
                     model_save_dir=MODEL_VER_DIR,
                     recall_k_values=[100, 500, 1000, 5000])
     history = run_all(config)
