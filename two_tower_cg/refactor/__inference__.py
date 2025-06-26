@@ -21,6 +21,11 @@ from typing import List
 import pandas as pd
 import tensorflow as tf
 
+CUR_DIR = os.path.dirname(os.path.abspath(__file__))
+import sys
+
+sys.path.insert(0, CUR_DIR)
+
 from src.config import Config, Variables
 from src.preprocess import preprocess, process_features, PreprocessedHmData
 from src.train import build_model
@@ -141,17 +146,24 @@ def run_inference(model_version: str,
     logger.info("Running inference …")
     # Build reverse lookup layer for indices→string
     article_lookup_inverse = tf.keras.layers.StringLookup(
-        vocabulary=preprocessed.lookups["article_id"].get_vocabulary(),
+        vocabulary=preprocessed.lookups["article_id"].get_vocabulary(include_special_tokens=False),
+        invert=True,
+        num_oov_indices=0,
+    )
+
+    customer_lookup_inverse = tf.keras.layers.StringLookup(
+        vocabulary=preprocessed.lookups["customer_id"].get_vocabulary(include_special_tokens=False),
         invert=True,
         num_oov_indices=0,
     )
 
     predictions: List[List[str]] = []
     customer_ids: List[str] = []
-    for batch in preprocessed.val_df:
+    for batch in preprocessed.val_ds:
         batch_preds = _predict_batch(model, batch, top_k, threshold, article_lookup_inverse)
         predictions.extend(batch_preds)
-        customer_ids.extend(batch["customer_id"].numpy().astype(str).tolist())
+        original_customer_ids = customer_lookup_inverse(batch["customer_id"])
+        customer_ids.extend(original_customer_ids.numpy().astype(str).tolist())
 
     result_df = pd.DataFrame(
         {
@@ -175,7 +187,7 @@ def run_inference(model_version: str,
 def _parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Run two-tower model inference.")
     parser.add_argument("-mv", "--model_version", required=True, help="Model version, e.g. 'v1'")
-    parser.add_argument("--top_k", type=int, default=12, help="Number of recommendations per customer")
+    parser.add_argument("--top_k", type=int, default=12, help="Number of candidates per customer")
     parser.add_argument("--batch_size", type=int, default=512, help="Batch size for inference")
     parser.add_argument("--embedding_dim", type=int, default=128, help="Embedding dimension (must match training)")
     parser.add_argument("--output", default="inference/inference_results.parquet", help="Path to write predictions")

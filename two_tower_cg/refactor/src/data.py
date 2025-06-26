@@ -26,11 +26,11 @@ VAL_PARQUET_PATH = PARQUET_DIR / 'val.parquet'
 ARTICLE_PARQUET_PATH = PARQUET_DIR / 'articles.parquet'
 CUSTOMER_PARQUET_PATH = PARQUET_DIR / 'customers.parquet'
 
-IMG_EMB_PARQUET_PATH = r"D:\Study\UNIVERSITY\THIRD YEAR\Business Analytics\final assignment\hm-two-step-reco\two-tower-cg\refactor\input\image_embeddings.parquet"
+IMG_EMB_PARQUET_PATH = r"D:\Study\UNIVERSITY\THIRD YEAR\Business Analytics\final assignment\hm-two-step-reco\data\image_embeddings.parquet"
 IMG_EMB_PARQUET_PATH = Path(IMG_EMB_PARQUET_PATH).resolve()
 
 # Date ranges:
-TRAIN_START, TRAIN_END = '2020-07-20', '2020-08-20'
+TRAIN_START, TRAIN_END = '2020-06-20', '2020-08-20'
 VAL_START, VAL_END = '2020-08-21', '2020-09-22'
 
 def create_age_interval(x):
@@ -72,7 +72,7 @@ def _load_raw_transactions() -> pd.DataFrame:
         return pd.read_parquet(RAW_PARQUET_PATH)
 
     logger.info('Reading raw transaction CSV files…')
-    tx_df = pd.read_csv(r"D:\Study\UNIVERSITY\THIRD YEAR\Business Analytics\final assignment\data\transactions_train.csv.zip",
+    tx_df = pd.read_csv(r"D:\Study\UNIVERSITY\THIRD YEAR\Business Analytics\final assignment\hm-two-step-reco\data\transactions_train.csv",
                         usecols=['article_id', 'customer_id', 't_dat', 'price', 'sales_channel_id'])
     tx_df['article_id'] = tx_df['article_id'].astype(str)
     tx_df['customer_id'] = tx_df['customer_id'].astype(str)
@@ -104,7 +104,7 @@ def load_data() -> Tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame, pd.DataFrame]
             article_df = pd.read_parquet(ARTICLE_PARQUET_PATH)
         else:
             logger.info('Reading articles CSV...')
-            article_df = pd.read_csv(r"D:\Study\UNIVERSITY\THIRD YEAR\Business Analytics\final assignment\data\articles.csv.zip")
+            article_df = pd.read_csv(r"D:\Study\UNIVERSITY\THIRD YEAR\Business Analytics\final assignment\hm-two-step-reco\data\articles.csv")
             for col in Variables.ARTICLE_CATEG_VARIABLES:
                 article_df[col] = article_df[col].astype(str)
         
@@ -113,7 +113,6 @@ def load_data() -> Tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame, pd.DataFrame]
                 img_emb_df = pd.read_parquet(IMG_EMB_PARQUET_PATH)
                 logger.info(f"Image embeddings loaded. Shape: {img_emb_df.shape}")
                 img_emb_df['article_id'] = img_emb_df['article_id'].astype(str)
-                img_emb_df["article_id"] = img_emb_df["article_id"].str[1:]
                 
                 article_df = article_df.merge(img_emb_df, on='article_id', how='left')
                 mapped_articles = article_df[article_df["img_embd_0"].notna()].shape[0]
@@ -130,7 +129,7 @@ def load_data() -> Tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame, pd.DataFrame]
             customer_df = pd.read_parquet(CUSTOMER_PARQUET_PATH)
         else:
             logger.info('Reading customers CSV...')
-            customer_df = pd.read_csv(r"D:\Study\UNIVERSITY\THIRD YEAR\Business Analytics\final assignment\data\customers.csv.zip")
+            customer_df = pd.read_csv(r"D:\Study\UNIVERSITY\THIRD YEAR\Business Analytics\final assignment\hm-two-step-reco\data\customers.csv")
             customer_df = preprocess_customer_data(customer_df)
             customer_df[Variables.CUSTOMER_CATEG_VARIABLES] = customer_df[Variables.CUSTOMER_CATEG_VARIABLES].astype(str)
             customer_df.to_parquet(CUSTOMER_PARQUET_PATH, index=False)

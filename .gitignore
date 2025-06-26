@@ -1,6 +1,18 @@
-**/*.parquet
-**/*.csv
+**/.idea
+**/*.iml
+**/*.p
+**/*.pkl
 **/*.npz
+
+plan.md
+
+**__pycache__
+
+**/*test*
+
+**/*.parquet
+data/**/*.parquet
+**/*.csv
 
 **/model/
 **/model_weights*
