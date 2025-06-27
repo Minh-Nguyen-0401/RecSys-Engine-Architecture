@@ -30,6 +30,8 @@ from src.config import Config, Variables
 from src.preprocess import preprocess, process_features, PreprocessedHmData
 from src.train import build_model
 from src.custom_recall import CustomRecall
+from filter_candidates import apply_candidate_filters
+
 
 logger = logging.getLogger(__name__)
 if not logger.handlers:
@@ -159,6 +161,22 @@ def run_inference(model_version: str,
 
     predictions: List[List[str]] = []
     customer_ids: List[str] = []
+
+    logger.info("Applying candidate filters before inference …")
+    # Chuyển DataFrame từ lookup
+    candidates_df = preprocessed.article_df.copy()
+    candidates_df["customer_id"] = "dummy"  # hoặc replicate mỗi khách hàng nếu cần
+
+    # Apply filters
+    filtered_articles_df = apply_candidate_filters(
+        candidates_df=candidates_df,
+        article_df=preprocessed.article_df,
+        customer_df=preprocessed.customer_df
+    )
+
+    # Cập nhật lại vocabulary nếu cần filter bằng lookup layer (phức tạp hơn)
+    logger.info(f"Filtered articles: {len(filtered_articles_df)} / {len(preprocessed.article_df)}")
+
     for batch in preprocessed.val_ds:
         batch_preds = _predict_batch(model, batch, top_k, threshold, article_lookup_inverse)
         predictions.extend(batch_preds)

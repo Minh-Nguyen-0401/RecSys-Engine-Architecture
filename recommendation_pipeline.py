@@ -29,7 +29,6 @@ import torch.nn.functional as F
 from huggingface_hub import PyTorchModelHubMixin
 from torchvision import transforms as v2
 
-
 class ImageEncoder(nn.Module, PyTorchModelHubMixin):
     def __init__(self, encoder_config):
         super(ImageEncoder, self).__init__()
@@ -62,6 +61,7 @@ def run_reranking(candidates_df, customer_id_to_rerank: str | None = None):
     normalization_layers = build_normalization_layers(hm_data)
 
     dummy_preprocessed = PreprocessedHmData(None, 0, None, 0, lookups, normalization_layers)
+    
 
     # 2. Rebuild model and load weights
     print("Rebuilding MMOE model and loading weights...")
@@ -127,6 +127,28 @@ def run_reranking(candidates_df, customer_id_to_rerank: str | None = None):
     print(f"Re-ranking complete. Results saved to {output_path}")
     return reranked_df
 
+"""
+def session_based_rerank(reranked_df, clicked_article_id, article_embeddings, top_k=20):
+    if clicked_article_id not in article_embeddings:
+        print(f"[WARN] Article {clicked_article_id} not found in embeddings.")
+        return reranked_df
+
+    anchor_emb = article_embeddings[clicked_article_id].reshape(1, -1)
+
+    candidate_ids = reranked_df['article_id'].values
+    candidate_embs = np.array([article_embeddings.get(i, np.zeros_like(anchor_emb[0])) for i in candidate_ids])
+
+    sim_scores = cosine_similarity(anchor_emb, candidate_embs)[0]
+
+    # You can customize how to blend similarity score and original score
+    reranked_df['session_score'] = sim_scores
+    reranked_df['final_score'] = (
+        0.7 * reranked_df['score'] + 0.3 * reranked_df['session_score']
+    )
+
+    return reranked_df.sort_values('final_score', ascending=False).reset_index(drop=True)
+"""
+    
 def search_by_image(image_path, reranked_df, image_embeddings_df, threshold = 0.3):
     """Step 3: Search for visually similar articles based on an input image."""
     print("\n--- Running Step 3: Image Search ---")
@@ -171,6 +193,35 @@ def search_by_image(image_path, reranked_df, image_embeddings_df, threshold = 0.
     final_recommendations = final_recommendations[['article_id', 'similarity']]
     print("Image search complete.")
     return final_recommendations
+
+def search_by_text(query: str, reranked_df, article_text_df, top_k=10):
+    """
+    Step 4: Search for articles whose textual descriptions are similar to a given text query.
+    """
+    print("\n--- Running Step 4: Text Query Search ---")
+
+    from sklearn.feature_extraction.text import TfidfVectorizer
+    from sklearn.metrics.pairwise import cosine_similarity
+
+    # 1. Get predicted article list
+    user_articles = reranked_df['predicted_article_ids'].iloc[0].split(' ')
+    candidates_text = article_text_df[article_text_df['article_id'].isin(user_articles)].copy()
+
+    # 2. Apply TF-IDF vectorization
+    vectorizer = TfidfVectorizer(stop_words='english', max_features=5000)
+    tfidf_matrix = vectorizer.fit_transform(candidates_text['detail_desc'].fillna(""))
+
+    # 3. Transform query to same TF-IDF space
+    query_vec = vectorizer.transform([query])
+
+    # 4. Compute cosine similarity
+    similarities = cosine_similarity(query_vec, tfidf_matrix).flatten()
+    candidates_text['similarity'] = similarities
+
+    # 5. Sort and return top results
+    top_results = candidates_text.sort_values(by='similarity', ascending=False).head(top_k)
+    print("Text query search complete.")
+    return top_results[['article_id', 'detail_desc', 'similarity']]
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="Run the H&M recommendation pipeline.")
@@ -217,3 +268,20 @@ if __name__ == '__main__':
         print(f"\nExample image or embeddings not found, skipping image search.")
 
     print("\nPipeline finished.")
+
+    # Step 4: Text Query Search
+    print("\n--- Preparing for Text Query Search Example ---")
+    text_article_path = HM_TWO_STEP_RECO_DIR / 'output' / 'parquet' / 'articles.parquet'
+    if text_article_path.exists():
+        article_text_df = pd.read_parquet(text_article_path)
+        example_query = "summer floral dress"
+        text_results = search_by_text(example_query, reranked_recommendations, article_text_df)
+        print("\nFinal Recommendations after Text Query:")
+        print(text_results)
+
+        import json
+        with open(HM_TWO_STEP_RECO_DIR / 'output' / 'final_recs_text_query.json', 'w') as f:
+            json.dump(text_results.to_dict(), f)
+    else:
+        print("articles.parquet not found, skipping text query search.")
+
