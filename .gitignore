@@ -22,3 +22,5 @@ plan.md
 **/__pycache__/
 
 **/*test*.ipynb
+
+**/pipeline.md
