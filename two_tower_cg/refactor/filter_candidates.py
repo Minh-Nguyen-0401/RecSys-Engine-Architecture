@@ -28,7 +28,8 @@ def apply_candidate_filters(candidates_df, article_df, price_range_ratio=0.2):
                   on='article_id', how='left')
 
     # Step 3: Load transactions
-    transactions = pd.read_csv("data/transactions_train.csv", usecols=["customer_id", "article_id", "price", "t_dat"])
+    transactions = pd.read_csv(r"D:\Study\UNIVERSITY\THIRD YEAR\Business Analytics\final assignment\hm-two-step-reco\data\transactions_train.csv",
+                        usecols=['article_id', 'customer_id', 't_dat', 'price'])
     transactions["t_dat"] = pd.to_datetime(transactions["t_dat"])
     transactions["customer_id"] = transactions["customer_id"].astype(str)
     transactions["article_id"] = transactions["article_id"].astype(str)
