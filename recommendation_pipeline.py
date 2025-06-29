@@ -172,6 +172,9 @@ def search_by_image(image_path, reranked_df, image_embeddings_df, threshold = 0.
     print("Image search complete.")
     return final_recommendations
 
+# Search by text query
+from search_module import search_by_text  
+
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="Run the H&M recommendation pipeline.")
     parser.add_argument("--customer_id", type=str, default="aa51fd04db21c0d2620a351dc5b94b704922d674b1c52a37225dd25a7a166ee0", 
@@ -217,3 +220,24 @@ if __name__ == '__main__':
         print(f"\nExample image or embeddings not found, skipping image search.")
 
     print("\nPipeline finished.")
+
+    # Step 4: Text Query Search
+    print("\n--- Preparing for Text Query Search ---")
+    text_article_path = HM_TWO_STEP_RECO_DIR / 'output' / 'parquet' / 'articles.parquet'
+    if text_article_path.exists():
+        article_text_df = pd.read_parquet(text_article_path)
+        example_query = "summer floral dress"
+
+        text_results = search_by_text(
+            query=example_query,
+            reranked_df=reranked_recommendations,
+            article_text_df=article_text_df
+        )
+
+        print("\nFinal Recommendations after Text Query:")
+        print(text_results)
+
+        with open(HM_TWO_STEP_RECO_DIR / 'output' / 'final_recs_text_query.json', 'w') as f:
+            json.dump(text_results.to_dict(), f)
+    else:
+        print("[INFO] articles.parquet not found. Skipping text query search.")

@@ -1,0 +1,22 @@
+# .dockerignore
+**/logs/
+*.pyc
+.env
+.git
+
+**/.idea
+**/*.iml
+**/*.p
+**/*.pkl
+**/*.npz
+
+**__pycache__
+
+**/*test*
+
+**/*.parquet
+**/*.csv
+
+**/__pycache__/
+**/*test*.ipynb
+pipeline.md

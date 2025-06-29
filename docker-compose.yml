@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  models:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: minhnd04/hmrecsys-models:v1.1
+    container_name: hmrecsys_v1.1
+    volumes:
+      - ./data:/app/backend/services/models/data
+      - ./two_tower_cg/refactor/output:/app/backend/services/models/two_tower_cg/refactor/output
+    tty: true
+    stdin_open: true

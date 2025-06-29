@@ -30,6 +30,7 @@ from src.config import Config, Variables
 from src.preprocess import preprocess, process_features, PreprocessedHmData
 from src.train import build_model
 from src.custom_recall import CustomRecall
+from filter_candidates import apply_candidate_filters
 
 logger = logging.getLogger(__name__)
 if not logger.handlers:
@@ -170,6 +171,13 @@ def run_inference(model_version: str,
             "customer_id": customer_ids,
             "predicted_article_ids": [" ".join(preds) for preds in predictions],
         }
+    )
+
+    logger.info("Applying candidate filters after inference …")
+    filtered_result_df = apply_candidate_filters(
+        candidates_df=result_df,
+        article_df=article_df,
+        price_range_ratio=0.2
     )
 
     if output_path:
