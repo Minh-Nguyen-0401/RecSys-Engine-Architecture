@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H&M Recommendation System</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header class="bg-primary text-white text-center py-3">
+        <h1>H&M Recommendation System</h1>
+    </header>
+
+    <main class="container my-4">
+        <div class="row">
+            <div class="col-md-4">
+                <label for="customerSelect" class="form-label">Select Customer ID</label>
+                <select id="customerSelect" class="form-select">
+                    <option value="">Select a customer...</option>
+                </select>
+            </div>
+            <div class="col-md-8">
+                <div class="row g-2" id="filterContainer">
+                    <!-- Filter dropdowns will be inserted here by JS -->
+                </div>
+            </div>
+        </div>
+
+        <section class="mb-4">
+            <h3>Search Products</h3>
+            <div class="input-group mb-3">
+                <input type="text" id="textQuery" class="form-control" placeholder="Enter text query (e.g., long trousers)">
+                <button class="btn btn-outline-secondary" onclick="search('text')">Search Text</button>
+            </div>
+            <div class="input-group">
+                <input type="file" id="imageUpload" class="form-control" accept="image/*">
+                <button class="btn btn-outline-secondary" onclick="search('image')">Upload Image</button>
+            </div>
+        </section>
+
+        <section id="resultsSection" class="mb-4 d-none">
+            <h3>Search Results <button class="btn btn-sm btn-danger" onclick="clearSearch()">Clear</button></h3>
+            <div id="resultsGrid" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4"></div>
+            <nav aria-label="Page navigation" class="mt-3">
+                <ul class="pagination justify-content-center" id="resultsPagination"></ul>
+            </nav>
+        </section>
+
+        <section id="feedSection" class="mb-4">
+            <h3>Product Feed</h3>
+            <div id="feedGrid" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4"></div>
+            <nav aria-label="Page navigation" class="mt-3">
+                <ul class="pagination justify-content-center" id="feedPagination"></ul>
+            </nav>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-2">
+        <p>H&M Recommendation System - Business Analytics Project</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+header.bg-primary {
+    background-color: #cc071e !important;
+}
+
+footer.bg-dark {
+    background-color: #333;
+}
+
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: box-shadow 0.3s;
+}
+
+.card:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.card-img-top {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    object-position: top;
+}
+
+.pagination .page-item.active .page-link {
+    background-color: #cc071e;
+    border-color: #cc071e;
+}
+
+.pagination {
+    margin-top: 20px;
+}
+
+.filter-label {
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+}
