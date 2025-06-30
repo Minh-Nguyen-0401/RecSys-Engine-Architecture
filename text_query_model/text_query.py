@@ -9,7 +9,7 @@ import warnings
 warnings.filterwarnings("ignore")
 
 CUR_DIR = os.path.dirname(os.path.abspath(__file__))
-MODEL_DIR = os.path.join(CUR_DIR, "tf_idf_model.pkl")
+MODEL_DIR = os.path.join(CUR_DIR, "models", "tf_idf_model.pkl")
 
 def search_by_text(query: str, reranked_df, article_df, threshold = 0.2):
     """
@@ -19,6 +19,9 @@ def search_by_text(query: str, reranked_df, article_df, threshold = 0.2):
 
     # 1. Get predicted article list
     user_articles = reranked_df['predicted_article_ids'].iloc[0].split(' ')
+
+    # Ensure article_id is string type for matching
+    article_df['article_id'] = article_df['article_id'].astype(str)
     candidates_df = article_df[article_df['article_id'].isin(user_articles)]
 
     # 2. Load the pre-trained TF-IDF model and the transformed TF-IDF matrix
@@ -26,12 +29,13 @@ def search_by_text(query: str, reranked_df, article_df, threshold = 0.2):
         raise FileNotFoundError(f"TF-IDF model not found at {MODEL_DIR}. Please run the training script first.")
     with open(MODEL_DIR, 'rb') as f:
         vectorizer = pickle.load(f)
-    tfidf_matrix_path = os.path.join(CUR_DIR, "tf_idf_matrix.npz")
+    tfidf_matrix_path = os.path.join(CUR_DIR, "output", "tf_idf_matrix.npz")
     if not os.path.exists(tfidf_matrix_path):
         raise FileNotFoundError(f"TF-IDF matrix not found at {tfidf_matrix_path}. Please run the training script first.")
 
     tfidf_matrix = sparse.load_npz(tfidf_matrix_path)
-    article_ids = np.load(os.path.join(CUR_DIR, "article_ids.npy"))
+    # Ensure article_ids are strings for matching
+    article_ids = np.load(os.path.join(CUR_DIR,"output", "article_ids.npy"), allow_pickle=True).astype(str)
 
     # filter the matrix to only include candidates
     mask = np.isin(article_ids, candidates_df['article_id'].values)

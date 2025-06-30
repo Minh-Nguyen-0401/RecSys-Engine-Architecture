@@ -4,8 +4,8 @@ import sys
 import pandas as pd
 import tensorflow as tf
 from tqdm import tqdm
-CUR_DIR = os.path.dirname(os.path.abspath(__file__))
-PRJ_ROOT = os.path.dirname(CUR_DIR)
+CUR_DIR = Path(__file__).resolve().parent
+PRJ_ROOT = CUR_DIR.parent
 MMOE_RANKER_DIR = CUR_DIR
 sys.path.insert(0, PRJ_ROOT)
 
@@ -79,7 +79,7 @@ def run_reranking(candidates_df, customer_id_to_rerank: str | None = None, outpu
 
     reranked_df = pd.DataFrame(all_reranked_results)
     
-    os.makedirs(output_path, exist_ok=True)
+    os.makedirs(output_path.parent, exist_ok=True)
     reranked_df.to_parquet(output_path, index=False)
     print(f"Re-ranking complete. Results saved to {output_path}")
     return reranked_df

@@ -39,13 +39,13 @@ from text_query_model.text_query import search_by_text
 from image_query_model.image_query import search_by_image
 from mmoe_ranker.__inference__ import run_reranking
 
-def run_candidate_generation(model_version='v1', top_k=100):
-    """Step 1: Generate candidate articles using the Two-Tower model."""
-    print("--- Running Step 1: Candidate Generation ---")
-    candidates_df = generate_candidates(model_version=model_version, top_k=top_k, 
-                                      output_path=str(HM_TWO_STEP_RECO_DIR / 'output' / 'inference_results.parquet'))
-    print(f"Candidate generation complete.")
-    return candidates_df
+# def run_candidate_generation(model_version='v1', top_k=100):
+#     """Step 1: Generate candidate articles using the Two-Tower model."""
+#     print("--- Running Step 1: Candidate Generation ---")
+#     candidates_df = generate_candidates(model_version=model_version, top_k=top_k, 
+#                                       output_path=str(HM_TWO_STEP_RECO_DIR / 'output' / 'inference_results.parquet'))
+#     print(f"Candidate generation complete.")
+#     return candidates_df
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="Run the H&M recommendation pipeline.")
@@ -65,7 +65,7 @@ if __name__ == '__main__':
     print("Candidates loaded successfully.")
 
     # Step 2: Re-rank candidates for the given customer_id
-    reranked_recommendations = run_reranking(candidates, customer_id_to_rerank=args.customer_id, output_path=HM_TWO_STEP_RECO_DIR / 'output' / 'reranked_recommendations.parquet')
+    reranked_recommendations = run_reranking(candidates, customer_id_to_rerank=args.customer_id, output_path=HM_TWO_STEP_RECO_DIR / 'output' / f'reranked_recommendations_{args.customer_id}.parquet')
 
     if reranked_recommendations.empty:
         print("No recommendations were generated. Exiting.")

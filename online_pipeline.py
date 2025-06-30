@@ -31,12 +31,12 @@ from torchvision import transforms as v2
 import argparse
 import json
 
-RERANKED_CANDIDATES = HM_TWO_STEP_RECO_DIR / 'output' / 'reranked_recommendations.parquet'
 ARTICLES_DF = HM_TWO_STEP_RECO_DIR / 'data' / 'articles.csv'
 
 def run_online_recommend(customer_id, method = 'text', query = None):
     """Run the online recommendation pipeline for a specific customer_id."""
     print(f"\n--- Running online recommendation for customer_id: {customer_id} ---")
+    RERANKED_CANDIDATES = HM_TWO_STEP_RECO_DIR / 'output' / f'reranked_recommendations_{customer_id}.parquet'
     reranked_cand = pd.read_parquet(RERANKED_CANDIDATES)
     reranked_cand = reranked_cand[reranked_cand['customer_id'] == customer_id]
 
@@ -47,13 +47,14 @@ def run_online_recommend(customer_id, method = 'text', query = None):
     
     if method == "image":
         feature_path = HM_TWO_STEP_RECO_DIR / 'data' / 'image_embeddings.parquet'
+        feature_df = pd.read_parquet(feature_path)
     elif method == "text":
-        feature_path = HM_TWO_STEP_RECO_DIR / 'output' / 'parquet' / 'articles.parquet'
+        feature_path = HM_TWO_STEP_RECO_DIR / 'data' / 'articles.csv'
+        feature_df = pd.read_csv(feature_path)
     else:
         raise ValueError("Method must be either 'text' or 'image'.")
     
     if query is not None and feature_path.exists():
-        feature_df = pd.read_parquet(feature_path)
         final_recs = map_method[method](query, reranked_cand, feature_df, threshold=0.2)
         final_recs["article_id"] = final_recs["article_id"].astype(str)
         print("\nFinal Recommendations:")
@@ -72,11 +73,11 @@ def run_online_recommend(customer_id, method = 'text', query = None):
     
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="Run the H&M online recommendation pipeline.")
-    parser.add_argument("--customer_id", type=str, required=True, 
+    parser.add_argument("--customer_id", type=str, default="aa51fd04db21c0d2620a351dc5b94b704922d674b1c52a37225dd25a7a166ee0", 
                         help="A specific customer_id to rerank for (simulates online inference).")
     parser.add_argument("--method", type=str, choices=['text', 'image'], default='text',
                         help="Method to use for querying: 'text' or 'image'.")
-    parser.add_argument("--query", type=str, default=None,
+    parser.add_argument("--query", type=str, default="long trousers",
                         help="Query string for text search or image path for image search.")
     
     args = parser.parse_args()

@@ -63,8 +63,6 @@ def apply_candidate_filters(candidates_df, article_df, price_range_ratio=0.2):
     df = df.merge(article_price_df, on="article_id", how="left")
 
     # Step 6: Apply filters
-    initial_count = len(df)
-
     is_in_stock_filter = (df['is_in_stock'] == 1).fillna(False)
     is_seasonal_filter = (df['is_seasonal'] == 1).fillna(False)
     location_available_filter = (df['location_available'] == 1).fillna(False)
@@ -80,9 +78,7 @@ def apply_candidate_filters(candidates_df, article_df, price_range_ratio=0.2):
         price_max_filter
     )
     df = df[filters]
-    final_count = len(df)
-    print(f"Filtered from {initial_count} to {final_count} candidates.")
-
     # Step 7: Regroup
     filtered_df = df.groupby('customer_id')['article_id'].apply(lambda ids: ' '.join(ids)).reset_index()
+    filtered_df = filtered_df.rename(columns={'article_id': 'predicted_article_ids'})
     return filtered_df
