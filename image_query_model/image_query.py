@@ -7,6 +7,7 @@ from torchvision import transforms as v2
 from transformers import AutoImageProcessor, SwinModel, SwinConfig
 from huggingface_hub import PyTorchModelHubMixin
 import torch.nn as nn
+import torch.nn.functional as F
 
 def search_by_image(image_path, reranked_df, image_embeddings_df, threshold = 0.3):
     print("\n--- Running Step 3: Image Search ---")
@@ -55,9 +56,6 @@ def search_by_image(image_path, reranked_df, image_embeddings_df, threshold = 0.
 
     final_recommendations = feed_embeddings[feed_embeddings['similarity'] >= threshold]
     final_recommendations = final_recommendations[['article_id', 'similarity']]
-    final_recommendations["org_order"] = final_recommendations["article_id"].apply(
-        lambda x: user_articles.index(x) if x in user_articles else -1
-    )
-    final_recommendations = final_recommendations.sort_values(by='org_order').drop(columns=['org_order']).reset_index(drop=True)
+    final_recommendations = final_recommendations.sort_values(by='similarity', ascending=False).reset_index(drop=True)
     print("Image search complete.")
     return final_recommendations
