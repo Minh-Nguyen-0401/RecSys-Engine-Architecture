@@ -17,9 +17,10 @@ import logging
 import os
 from pathlib import Path
 from typing import List
-
 import pandas as pd
 import tensorflow as tf
+import warnings
+warnings.filterwarnings("ignore")
 
 CUR_DIR = os.path.dirname(os.path.abspath(__file__))
 import sys
@@ -174,10 +175,11 @@ def run_inference(model_version: str,
     )
 
     logger.info("Applying candidate filters after inference …")
+    
     filtered_result_df = apply_candidate_filters(
         candidates_df=result_df,
         article_df=article_df,
-        price_range_ratio=0.2
+        price_range_ratio=0.6,
     )
 
     if output_path:
@@ -185,11 +187,12 @@ def run_inference(model_version: str,
         if not output_path.is_absolute():
             output_path = OUTPUT_DIR / output_path
         output_path.parent.mkdir(parents=True, exist_ok=True)
-        result_df.to_parquet(output_path, index=False)
+        filtered_result_df.to_parquet(output_path, index=False)
+        result_df.to_parquet(OUTPUT_DIR / "inference" / "inference_results_ini.parquet", index=False)
         logger.info(f"Inference results written to {output_path}")
 
     logger.info("Inference completed.")
-    return result_df
+    return filtered_result_df
 
 
 def _parse_args() -> argparse.Namespace:
