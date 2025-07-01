@@ -17,9 +17,10 @@ import logging
 import os
 from pathlib import Path
 from typing import List
-
 import pandas as pd
 import tensorflow as tf
+import warnings
+warnings.filterwarnings("ignore")
 
 CUR_DIR = os.path.dirname(os.path.abspath(__file__))
 import sys
@@ -30,6 +31,7 @@ from src.config import Config, Variables
 from src.preprocess import preprocess, process_features, PreprocessedHmData
 from src.train import build_model
 from src.custom_recall import CustomRecall
+from filter_candidates import apply_candidate_filters
 
 logger = logging.getLogger(__name__)
 if not logger.handlers:
@@ -60,6 +62,7 @@ def _predict_batch(model: tf.keras.Model,
                 idx = tf.math.top_k(logits[i], k=top_k).indices  # fallback
             preds = article_lookup_inverse(idx).numpy().astype(str).tolist()
             predictions.append(preds)
+            logger.info(f"Customer {i}: Found {len(preds)} articles above threshold {threshold}.")
         return predictions
     else:
         top_indices = tf.math.top_k(logits, k=top_k).indices  # (batch, k)
@@ -98,6 +101,10 @@ def run_inference(model_version: str,
     if "t_dat" in trans_df.columns:
         trans_df.sort_values("t_dat", inplace=True)
     latest_trans_df = trans_df.drop_duplicates("customer_id", keep="last")
+
+    # Keep only 10 customers for examples of inference
+    n_cust_to_keep = 10
+    latest_trans_df = latest_trans_df.head(n_cust_to_keep)
 
     latest_trans_df.to_parquet(
         os.path.join(OUTPUT_DIR, "inference", "latest_transactions.parquet"),
@@ -164,6 +171,7 @@ def run_inference(model_version: str,
         predictions.extend(batch_preds)
         original_customer_ids = customer_lookup_inverse(batch["customer_id"])
         customer_ids.extend(original_customer_ids.numpy().astype(str).tolist())
+        logger.info(f"Finished processing batch of size {len(batch_preds)} for {len(customer_ids)} customers.")
 
     result_df = pd.DataFrame(
         {
@@ -171,17 +179,26 @@ def run_inference(model_version: str,
             "predicted_article_ids": [" ".join(preds) for preds in predictions],
         }
     )
+    result_df.to_parquet(OUTPUT_DIR / "inference" / "inference_results_ini.parquet", index=False)
+    logger.info("Initial Inference results generated.")
+
+    logger.info("Applying candidate filters after inference …")
+    filtered_result_df = apply_candidate_filters(
+        candidates_df=result_df,
+        article_df=article_df,
+        price_range_ratio=0.6,
+    )
 
     if output_path:
         output_path = Path(output_path)
         if not output_path.is_absolute():
             output_path = OUTPUT_DIR / output_path
         output_path.parent.mkdir(parents=True, exist_ok=True)
-        result_df.to_parquet(output_path, index=False)
+        filtered_result_df.to_parquet(output_path, index=False)
         logger.info(f"Inference results written to {output_path}")
 
     logger.info("Inference completed.")
-    return result_df
+    return filtered_result_df
 
 
 def _parse_args() -> argparse.Namespace:

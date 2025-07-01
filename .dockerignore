@@ -1,28 +1,22 @@
+# .dockerignore
+**/logs/
+*.pyc
+.env
+.git
+
 **/.idea
 **/*.iml
 **/*.p
 **/*.pkl
 **/*.npz
 
-plan.md
-
 **__pycache__
 
 **/*test*
 
-!data/test_img.jpg
-!output/
-
 **/*.parquet
 **/*.csv
 
-**/model/
-**/model_weights*
-
 **/__pycache__/
-
 **/*test*.ipynb
-
-**/pipeline.md
-
-**/images/
+pipeline.md
