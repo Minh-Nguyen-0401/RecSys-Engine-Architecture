@@ -1,572 +1,442 @@
 [
     {
-        "article_id": "681179002",
-        "detail_desc": "Short, gently fitted dungaree dress in woven fabric with buttons down the front, wide, adjustable shoulder straps and a seam at the waist.",
-        "similarity": 0.22383250023290452
-    },
-    {
-        "article_id": "702762006",
-        "detail_desc": "Short dress in a softly draping viscose weave. Opening with a covered button at the back of the neck, an elasticated seam at the waist and 3/4-length sleeves with a slit at the cuffs. Unlined.",
-        "similarity": 0.2075528965571092
-    },
-    {
         "article_id": "738731006",
         "detail_desc": "Calf-length dress in soft cotton jersey with short sleeves, an elasticated seam at the waist and a wrapover skirt. Unlined.",
-        "similarity": 0.2652664152177446
+        "similarity": 0.20371439066903418
     },
     {
         "article_id": "496762004",
         "detail_desc": "Short dress in soft jersey with a V-neck, narrow, adjustable shoulder straps, seam at the waist and flared skirt.",
-        "similarity": 0.2786371284009283
-    },
-    {
-        "article_id": "735724008",
-        "detail_desc": "Wide, straight-cut dress in cotton jersey with dropped shoulders, short sleeves and a seam and wide flounce at the hem.",
-        "similarity": 0.24452917234929686
-    },
-    {
-        "article_id": "401044004",
-        "detail_desc": "Short dress in a washed viscose weave with a round neck, short sleeves with sewn-in turn-ups, and a rounded hem. Slightly longer at the back.",
-        "similarity": 0.20778062166325623
+        "similarity": 0.21398258344680007
     },
     {
         "article_id": "502522001",
         "detail_desc": "Short dress in cotton jersey with long sleeves.",
-        "similarity": 0.48705999996815275
+        "similarity": 0.6342245128740723
     },
     {
         "article_id": "676979010",
         "detail_desc": "Short, fitted, sleeveless dress in soft jersey.",
-        "similarity": 0.396209646043493
+        "similarity": 0.3042737489202692
     },
     {
         "article_id": "716348001",
         "detail_desc": "Short T-shirt dress in soft viscose jersey.",
-        "similarity": 0.4200724605146845
-    },
-    {
-        "article_id": "681179001",
-        "detail_desc": "Short, gently fitted dungaree dress in woven fabric with buttons down the front, wide, adjustable shoulder straps and a seam at the waist.",
-        "similarity": 0.22383250023290452
-    },
-    {
-        "article_id": "694349002",
-        "detail_desc": "V-neck dress in microfibre with lace details, narrow adjustable shoulder straps, a folded, glued edge at the top and laser-cut edge at the hem. The dress has a gentle sculpting effect on the tummy, waist and hips.",
-        "similarity": 0.24936670468456965
-    },
-    {
-        "article_id": "732671007",
-        "detail_desc": "Sleeveless, calf-length dress in a soft, ribbed viscose blend with a slightly deeper neckline at the front.",
-        "similarity": 0.22395477029029662
-    },
-    {
-        "article_id": "522918034",
-        "detail_desc": "Short dress in a viscose weave with an opening and covered button at the back of the neck, elasticated seam at the waist and 3/4-length sleeves with a slit at the cuffs. Unlined.",
-        "similarity": 0.23169216353060107
+        "similarity": 0.3225994714044241
     },
     {
         "article_id": "681180031",
         "detail_desc": "Short, sleeveless dress in sturdy jersey with a low-cut back, seam at the waist and flared skirt. The polyester content of the dress is partly recycled.",
-        "similarity": 0.3943999758440346
-    },
-    {
-        "article_id": "618287012",
-        "detail_desc": "V-neck dress in an airy weave with short, double-flounced sleeves, an elasticated seam at the waist and ties at the sides. Lined.",
-        "similarity": 0.23481736130897338
+        "similarity": 0.30288399190300047
     },
     {
         "article_id": "676979009",
         "detail_desc": "Short, fitted, sleeveless dress in soft jersey.",
-        "similarity": 0.396209646043493
+        "similarity": 0.3042737489202692
+    },
+    {
+        "article_id": "316441005",
+        "detail_desc": "Long-sleeved top in soft jersey.",
+        "similarity": 0.24844742485904528
     },
     {
         "article_id": "646676005",
         "detail_desc": "Long dress in woven fabric with a V-neck, wrapover front, wide tie at the waist and short, double-layered sleeves. Unlined.",
-        "similarity": 0.23372304609894515
-    },
-    {
-        "article_id": "732671008",
-        "detail_desc": "Sleeveless, calf-length dress in a soft, ribbed viscose blend with a slightly deeper neckline at the front.",
-        "similarity": 0.22395477029029662
-    },
-    {
-        "article_id": "719484004",
-        "detail_desc": "Knee-length dress in jersey cr\u00eape and lace with a round neckline and cap sleeves. Seam at the waist, a concealed zip at the back, and a gently flared skirt.",
-        "similarity": 0.20231461527504838
+        "similarity": 0.3043421448471242
     },
     {
         "article_id": "708430002",
         "detail_desc": "Long dress in viscose jersey with a lace bodice. Wide neckline with a V-neck at the back, short cap sleeves and a concealed zip at the back.",
-        "similarity": 0.222339366936131
+        "similarity": 0.289518902593146
     },
     {
         "article_id": "543310001",
         "detail_desc": "Short dress in a viscose weave with a visible seam centre back, long sleeves with a zip at the cuffs, and a rounded hem.",
-        "similarity": 0.21808035680792662
+        "similarity": 0.28397303837916255
+    },
+    {
+        "article_id": "685942001",
+        "detail_desc": "Long dress in an airy weave in a narrow cut at the top with flounces around the armholes, short, narrow shoulder straps and a concealed zip at the back. Seam at the waist and a wide skirt with gathers at the top. Lined.",
+        "similarity": 0.22203150124361215
+    },
+    {
+        "article_id": "316441001",
+        "detail_desc": "Long-sleeved top in soft jersey.",
+        "similarity": 0.24844742485904528
+    },
+    {
+        "article_id": "589835001",
+        "detail_desc": "Short, fitted lace dress with V-neck, gathers at the front and long, transparent sleeves. Contrasting colour lining front and back.",
+        "similarity": 0.2382398291712341
     },
     {
         "article_id": "685009006",
         "detail_desc": "Fitted dress in stretch jersey with a V-neck, long sleeves and a decorative knot at the front.",
-        "similarity": 0.27611392702501064
+        "similarity": 0.35954137247286766
+    },
+    {
+        "article_id": "709987009",
+        "detail_desc": "Short, V-neck dress in woven fabric with a small stand-up collar and buttons at the top. Long sleeves with wide, buttoned cuffs, an elasticated seam at the waist and a decorative belt with a metal buckle.",
+        "similarity": 0.2508453107738696
     },
     {
         "article_id": "746627002",
         "detail_desc": "Short dress in a patterned cr\u00eape weave with buttons down the front, a seam at the waist and 3/4-length sleeves. Unlined.",
-        "similarity": 0.2829242311061694
+        "similarity": 0.21727491321503276
     },
     {
         "article_id": "458239017",
         "detail_desc": "Short-sleeved dress in soft cotton jersey.",
-        "similarity": 0.4207100791587569
+        "similarity": 0.3230891379664342
     },
     {
         "article_id": "706509007",
         "detail_desc": "Short, fitted dress in soft jersey with a round neckline and long sleeves.",
-        "similarity": 0.3533834657085876
+        "similarity": 0.46015779659884853
+    },
+    {
+        "article_id": "617245002",
+        "detail_desc": "Long, sleeveless dress in airy chiffon with pleats at the top and an opening with a button at the back of the neck. Seam at the waist with a short gathered frill and decorative narrow ties at the sides, and a gathered, draped skirt. Lined.",
+        "similarity": 0.20946621134413562
     },
     {
         "article_id": "568838009",
         "detail_desc": "Short, sleeveless dress in a cr\u00eape weave with pleats at the top and a small opening at the back. Lined.",
-        "similarity": 0.26289629003000836
+        "similarity": 0.201894225805598
     },
     {
         "article_id": "458239022",
         "detail_desc": "Short-sleeved dress in soft cotton jersey.",
-        "similarity": 0.4207100791587569
-    },
-    {
-        "article_id": "618287010",
-        "detail_desc": "V-neck dress in an airy weave with short, double-flounced sleeves, an elasticated seam at the waist and ties at the sides. Lined.",
-        "similarity": 0.23481736130897338
+        "similarity": 0.3230891379664342
     },
     {
         "article_id": "681176046",
         "detail_desc": "Short, fitted dress in soft jersey with short sleeves.",
-        "similarity": 0.3813437708528606
+        "similarity": 0.2928573293040289
     },
     {
         "article_id": "730153001",
         "detail_desc": "Short dress in an airy weave with pin-tucks at the top and an opening with a button at the back of the neck. Gathered seam at the waist and a gently flared skirt. Lace sections at the cuffs and hem. Jersey inner dress.",
-        "similarity": 0.3118032717025095
+        "similarity": 0.23945290417314402
     },
     {
         "article_id": "646676003",
         "detail_desc": "Long dress in woven fabric with a V-neck, wrapover front, wide tie at the waist and short, double-layered sleeves. Unlined.",
-        "similarity": 0.23372304609894515
-    },
-    {
-        "article_id": "721744006",
-        "detail_desc": "Short dress in an airy viscose weave with a V-neck and buttons down the front. Short, frill-trimmed sleeves, a tapered waist and a gently flared skirt.",
-        "similarity": 0.21133186402671128
+        "similarity": 0.3043421448471242
     },
     {
         "article_id": "714718002",
         "detail_desc": "Short, flounced dress in soft, woven viscose with a wrapover front, long-sleeves, a seam at the waist and a tie at the side. Unlined.",
-        "similarity": 0.235317400072772
+        "similarity": 0.30641823069376584
+    },
+    {
+        "article_id": "509210006",
+        "detail_desc": "Long top in soft, ribbed jersey with long sleeves, high slits in the sides and a rounded, raw-edge hem. Longer at the back.",
+        "similarity": 0.23139299823570567
     },
     {
         "article_id": "714620007",
         "detail_desc": "Short dress in a patterned viscose weave with a collar and buttons down the front. Long sleeves with narrow elastication at the cuffs, a seam at the waist and a gently flared skirt. Unlined.",
-        "similarity": 0.21900951931024598
+        "similarity": 0.28518294606087097
     },
     {
-        "article_id": "608007014",
-        "detail_desc": "Calf-length lace dress with a V-neck and narrow, adjustable shoulder straps. Seam and concealed zip at the waist, and a flared skirt. Lined.",
-        "similarity": 0.23625260914247104
+        "article_id": "596400008",
+        "detail_desc": "Long-sleeved top in soft cotton jersey.",
+        "similarity": 0.23205035324924245
     },
     {
         "article_id": "676979002",
         "detail_desc": "Short, fitted, sleeveless dress in soft jersey.",
-        "similarity": 0.396209646043493
+        "similarity": 0.3042737489202692
     },
     {
         "article_id": "212629004",
         "detail_desc": "Long, sleeveless dress in jersey with narrow shoulder straps and an elasticated seam at the waist. Unlined.",
-        "similarity": 0.2976961221959976
+        "similarity": 0.38764459839979126
     },
     {
         "article_id": "543310004",
         "detail_desc": "Short dress in a viscose weave with a visible seam centre back, long sleeves with a zip at the cuffs, and a rounded hem.",
-        "similarity": 0.21808035680792662
+        "similarity": 0.28397303837916255
     },
     {
         "article_id": "716348002",
         "detail_desc": "Short T-shirt dress in soft viscose jersey.",
-        "similarity": 0.4200724605146845
-    },
-    {
-        "article_id": "745477001",
-        "detail_desc": "Short, straight-cut dress in a viscose weave with an opening and concealed button at the back of the neck and flared, elbow-length sleeves.",
-        "similarity": 0.21969808190866047
-    },
-    {
-        "article_id": "618287009",
-        "detail_desc": "V-neck dress in an airy weave with short, double-flounced sleeves, an elasticated seam at the waist and ties at the sides. Lined.",
-        "similarity": 0.23481736130897338
-    },
-    {
-        "article_id": "732671001",
-        "detail_desc": "Sleeveless, calf-length dress in a soft, ribbed viscose blend with a slightly deeper neckline at the front.",
-        "similarity": 0.22395477029029662
-    },
-    {
-        "article_id": "608007001",
-        "detail_desc": "Calf-length lace dress with a V-neck and narrow, adjustable shoulder straps. Seam and concealed zip at the waist, and a flared skirt. Lined.",
-        "similarity": 0.23625260914247104
+        "similarity": 0.3225994714044241
     },
     {
         "article_id": "714620005",
         "detail_desc": "Short dress in a patterned viscose weave with a collar and buttons down the front. Long sleeves with narrow elastication at the cuffs, a seam at the waist and a gently flared skirt. Unlined.",
-        "similarity": 0.21900951931024598
-    },
-    {
-        "article_id": "681179031",
-        "detail_desc": "Short, gently fitted dungaree dress in woven fabric with buttons down the front, wide, adjustable shoulder straps and a seam at the waist.",
-        "similarity": 0.22383250023290452
-    },
-    {
-        "article_id": "743483002",
-        "detail_desc": "Short, V-neck dress in an airy, crinkled weave with a flounce-trimmed neckline, short butterfly sleeves and an elasticated seam at the waist. Lined.",
-        "similarity": 0.20023691340761723
+        "similarity": 0.28518294606087097
     },
     {
         "article_id": "720635008",
         "detail_desc": "Short dress in a patterned viscose weave with a V-neck, wrapover front with ties at the waist and short sleeves.",
-        "similarity": 0.2676807574406722
+        "similarity": 0.20556851251256458
     },
     {
         "article_id": "212629048",
         "detail_desc": "Long, sleeveless dress in jersey with narrow shoulder straps and an elasticated seam at the waist. Unlined.",
-        "similarity": 0.2976961221959976
+        "similarity": 0.38764459839979126
+    },
+    {
+        "article_id": "709987008",
+        "detail_desc": "Short, V-neck dress in woven fabric with a small stand-up collar and buttons at the top. Long sleeves with wide, buttoned cuffs, an elasticated seam at the waist and a decorative belt with a metal buckle.",
+        "similarity": 0.2508453107738696
     },
     {
         "article_id": "212629047",
         "detail_desc": "Long, sleeveless dress in jersey with narrow shoulder straps and an elasticated seam at the waist. Unlined.",
-        "similarity": 0.2976961221959976
+        "similarity": 0.38764459839979126
     },
     {
-        "article_id": "724729001",
-        "detail_desc": "Dress in a soft, fine-knit viscose blend a round neckline, 3/4-length sleeves and a gently flared skirt. Unlined.",
-        "similarity": 0.23594226373148416
+        "article_id": "509210020",
+        "detail_desc": "Long top in soft, ribbed jersey with long sleeves, high slits in the sides and a rounded, raw-edge hem. Longer at the back.",
+        "similarity": 0.23139299823570567
+    },
+    {
+        "article_id": "316441038",
+        "detail_desc": "Long-sleeved top in soft jersey.",
+        "similarity": 0.24844742485904528
     },
     {
         "article_id": "708492004",
         "detail_desc": "Wide, sleeveless dress in softly draping jersey. Unlined.",
-        "similarity": 0.3113726114592875
+        "similarity": 0.2391221736923882
     },
     {
         "article_id": "681174015",
         "detail_desc": "Short dress in woven fabric with a collar, buttons down the front and a yoke at the back. Narrow, detachable belt at the waist and long sleeves with buttoned cuffs. Unlined.",
-        "similarity": 0.22865378940262915
-    },
-    {
-        "article_id": "608007015",
-        "detail_desc": "Calf-length lace dress with a V-neck and narrow, adjustable shoulder straps. Seam and concealed zip at the waist, and a flared skirt. Lined.",
-        "similarity": 0.23625260914247104
-    },
-    {
-        "article_id": "512251004",
-        "detail_desc": "Short dress in lightweight sweatshirt fabric with dropped shoulders, 3/4-length sleeves with sewn-in turn-ups and short slits in the sides.",
-        "similarity": 0.2049249457218931
+        "similarity": 0.29774121917253615
     },
     {
         "article_id": "550309001",
         "detail_desc": "Straight-cut dress in sturdy jersey with 3/4-length sleeves and front pockets. Unlined.",
-        "similarity": 0.3040220427195991
-    },
-    {
-        "article_id": "618287014",
-        "detail_desc": "V-neck dress in an airy weave with short, double-flounced sleeves, an elasticated seam at the waist and ties at the sides. Lined.",
-        "similarity": 0.23481736130897338
+        "similarity": 0.2334772199931145
     },
     {
         "article_id": "676979011",
         "detail_desc": "Short, fitted, sleeveless dress in soft jersey.",
-        "similarity": 0.396209646043493
-    },
-    {
-        "article_id": "401044032",
-        "detail_desc": "Short dress in a washed viscose weave with a round neck, short sleeves with sewn-in turn-ups, and a rounded hem. Slightly longer at the back.",
-        "similarity": 0.20778062166325623
+        "similarity": 0.3042737489202692
     },
     {
         "article_id": "681180035",
         "detail_desc": "Short, sleeveless dress in sturdy jersey with a low-cut back, seam at the waist and flared skirt. The polyester content of the dress is partly recycled.",
-        "similarity": 0.3943999758440346
+        "similarity": 0.30288399190300047
     },
     {
-        "article_id": "727937005",
-        "detail_desc": "Sleeveless maxi dress in jersey and lace with a V-neck front and back, a concealed zip at the back and a seam at the waist.",
-        "similarity": 0.24324742010579573
+        "article_id": "596400007",
+        "detail_desc": "Long-sleeved top in soft cotton jersey.",
+        "similarity": 0.23205035324924245
     },
     {
-        "article_id": "618287018",
-        "detail_desc": "V-neck dress in an airy weave with short, double-flounced sleeves, an elasticated seam at the waist and ties at the sides. Lined.",
-        "similarity": 0.23481736130897338
-    },
-    {
-        "article_id": "735439001",
-        "detail_desc": "Calf-length dress in a soft, fine-knit viscose blend a round neckline, short sleeves and flared skirt. Unlined.",
-        "similarity": 0.2311773741073909
+        "article_id": "316441039",
+        "detail_desc": "Long-sleeved top in soft jersey.",
+        "similarity": 0.24844742485904528
     },
     {
         "article_id": "663472005",
         "detail_desc": "Calf-length dress in an airy, patterned weave with an opening and narrow ties at the top, 3/4-length sleeves with narrow elastication and a frill at the cuffs, a smocked seam at the waist and a flared skirt. Jersey inner dress.",
-        "similarity": 0.3240941795378813
+        "similarity": 0.2488918480303856
     },
     {
-        "article_id": "710729008",
-        "detail_desc": "Short dress in a cr\u00eape weave with a V-neck and wrapover front with concealed press-studs. Short sleeves and a seam at the waist with a sewn-in tie belt.",
-        "similarity": 0.20776510054843228
-    },
-    {
-        "article_id": "745477015",
-        "detail_desc": "Short, straight-cut dress in a viscose weave with an opening and concealed button at the back of the neck and flared, elbow-length sleeves.",
-        "similarity": 0.21969808190866047
-    },
-    {
-        "article_id": "732671003",
-        "detail_desc": "Sleeveless, calf-length dress in a soft, ribbed viscose blend with a slightly deeper neckline at the front.",
-        "similarity": 0.22395477029029662
+        "article_id": "301656026",
+        "detail_desc": "Long, straight-cut shirt in soft Tencel\u2122 lyocell denim with a collar and buttons down the front. Chest pockets with a pleat, and long sleeves with buttoned cuffs.",
+        "similarity": 0.20328449399043083
     },
     {
         "article_id": "731146001",
         "detail_desc": "Fitted dress in cotton jersey with long sleeves.",
-        "similarity": 0.45359502318439404
+        "similarity": 0.5906481391205116
     },
     {
         "article_id": "716348008",
         "detail_desc": "Short T-shirt dress in soft viscose jersey.",
-        "similarity": 0.4200724605146845
+        "similarity": 0.3225994714044241
     },
     {
         "article_id": "685468001",
         "detail_desc": "Short dress in soft jersey with a round neckline, long sleeves, seam at the waist and bell-shaped skirt. Unlined.",
-        "similarity": 0.23198578542988385
-    },
-    {
-        "article_id": "666354006",
-        "detail_desc": "Sleeveless dress in jersey cr\u00eape with pleats at the front of the neckline, an opening with a button at the top and a detachable tie belt at the waist. Unlined.",
-        "similarity": 0.22350433421915533
-    },
-    {
-        "article_id": "706365003",
-        "detail_desc": "Knee-length dress in a stretch weave with a cut-out V-neck, cap sleeves, concealed zip in one side, seam at the waist and flared skirt.",
-        "similarity": 0.20989720346989443
-    },
-    {
-        "article_id": "675027003",
-        "detail_desc": "Short dress in a patterned viscose weave with a V-neck, buttons down the front, narrow adjustable shoulder straps and a rounded hem. Slightly longer at the back.",
-        "similarity": 0.23210837704584536
+        "similarity": 0.3020799732427166
     },
     {
         "article_id": "637255001",
         "detail_desc": "Straight-cut dress in stretch jersey with a round neckline and 3/4-length sleeves. Unlined.",
-        "similarity": 0.3031802747401227
+        "similarity": 0.2328307746039273
     },
     {
         "article_id": "740832002",
         "detail_desc": "Short, fitted, off-the-shoulder dress in soft cotton jersey with decorative metal eyelets around the neckline and long sleeves.",
-        "similarity": 0.22518270223387976
-    },
-    {
-        "article_id": "747198002",
-        "detail_desc": "Short dress in a patterned viscose weave with narrow, adjustable straps, a wrapover front with ties at one side and a flounced hem. Unlined.",
-        "similarity": 0.21603715545115873
+        "similarity": 0.29322134776267395
     },
     {
         "article_id": "685017007",
         "detail_desc": "Short dress in soft, patterned viscose with a V-neck and wrapover front with ties at the waist and long sleeves. Unlined.",
-        "similarity": 0.27224013949444226
+        "similarity": 0.3544971253375804
     },
     {
         "article_id": "710676001",
         "detail_desc": "Short, fitted dress in jersey with a square neckline, an opening with a decorative tie detail at the front and long sleeves.",
-        "similarity": 0.23672387291260943
-    },
-    {
-        "article_id": "690193007",
-        "detail_desc": "Short dress in woven fabric with 3/4-length, flounce-trimmed sleeves and a round neckline that has an opening and button at the back of the neck.",
-        "similarity": 0.24250603489361677
+        "similarity": 0.30824966737872217
     },
     {
         "article_id": "702208004",
         "detail_desc": "Calf-length, fitted dress in soft cotton jersey with a polo neck and long sleeves.",
-        "similarity": 0.2890755531943298
+        "similarity": 0.37641933626342694
+    },
+    {
+        "article_id": "316441033",
+        "detail_desc": "Long-sleeved top in soft jersey.",
+        "similarity": 0.24844742485904528
+    },
+    {
+        "article_id": "660599002",
+        "detail_desc": "Long cardigan in a soft, fine knit with long sleeves and ribbing at the cuffs and hem. No buttons.",
+        "similarity": 0.282069697069145
+    },
+    {
+        "article_id": "660599016",
+        "detail_desc": "Long cardigan in a soft, fine knit with long sleeves and ribbing at the cuffs and hem. No buttons.",
+        "similarity": 0.282069697069145
+    },
+    {
+        "article_id": "669893004",
+        "detail_desc": "Long cardigan in a soft, loose knit with dropped shoulders and long, wide sleeves with ribbed cuffs. No buttons.",
+        "similarity": 0.24730626704327538
+    },
+    {
+        "article_id": "669893002",
+        "detail_desc": "Long cardigan in a soft, loose knit with dropped shoulders and long, wide sleeves with ribbed cuffs. No buttons.",
+        "similarity": 0.24730626704327538
     },
     {
         "article_id": "736049002",
         "detail_desc": "Short, straight-style dress in lightweight sweatshirt fabric with long sleeves and ribbing around the neckline and cuffs.",
-        "similarity": 0.23646339394275956
+        "similarity": 0.3079104850443532
     },
     {
         "article_id": "212629051",
         "detail_desc": "Long, sleeveless dress in jersey with narrow shoulder straps and an elasticated seam at the waist. Unlined.",
-        "similarity": 0.2976961221959976
+        "similarity": 0.38764459839979126
     },
     {
         "article_id": "736049005",
         "detail_desc": "Short, straight-style dress in lightweight sweatshirt fabric with long sleeves and ribbing around the neckline and cuffs.",
-        "similarity": 0.23646339394275956
+        "similarity": 0.3079104850443532
     },
     {
         "article_id": "736049004",
         "detail_desc": "Short, straight-style dress in lightweight sweatshirt fabric with long sleeves and ribbing around the neckline and cuffs.",
-        "similarity": 0.23646339394275956
+        "similarity": 0.3079104850443532
     },
     {
         "article_id": "702208002",
         "detail_desc": "Calf-length, fitted dress in soft cotton jersey with a polo neck and long sleeves.",
-        "similarity": 0.2890755531943298
+        "similarity": 0.37641933626342694
     },
     {
         "article_id": "706509001",
         "detail_desc": "Short, fitted dress in soft jersey with a round neckline and long sleeves.",
-        "similarity": 0.3533834657085876
+        "similarity": 0.46015779659884853
     },
     {
         "article_id": "736049001",
         "detail_desc": "Short, straight-style dress in lightweight sweatshirt fabric with long sleeves and ribbing around the neckline and cuffs.",
-        "similarity": 0.23646339394275956
+        "similarity": 0.3079104850443532
     },
     {
         "article_id": "496762020",
         "detail_desc": "Short dress in soft jersey with a V-neck, narrow, adjustable shoulder straps, seam at the waist and flared skirt.",
-        "similarity": 0.2786371284009283
+        "similarity": 0.21398258344680007
     },
     {
         "article_id": "477507009",
         "detail_desc": "Short, straight-cut dress in jersey made from a cotton blend with short sleeves.",
-        "similarity": 0.2969282401246672
-    },
-    {
-        "article_id": "696744001",
-        "detail_desc": "Short dungaree dress in soft cotton twill with buttons down the front, adjustable straps with metal fasteners and diagonal side pockets. Unlined.",
-        "similarity": 0.20324459505533038
+        "similarity": 0.22802945280416695
     },
     {
         "article_id": "477507001",
         "detail_desc": "Short, straight-cut dress in jersey made from a cotton blend with short sleeves.",
-        "similarity": 0.2969282401246672
+        "similarity": 0.22802945280416695
     },
     {
         "article_id": "681176023",
         "detail_desc": "Short, fitted dress in soft jersey with short sleeves.",
-        "similarity": 0.3813437708528606
+        "similarity": 0.2928573293040289
     },
     {
         "article_id": "747015002",
         "detail_desc": "Short jersey dress with narrow shoulder straps, a seam at the waist and a flared skirt.",
-        "similarity": 0.31002339810800905
+        "similarity": 0.23808602980092494
     },
     {
-        "article_id": "665044007",
-        "detail_desc": "Sleeveless shirt dress in a viscose weave with a collar and buttons down the front. Detachable tie belt at the waist and a gently rounded hem.",
-        "similarity": 0.22869093270524668
-    },
-    {
-        "article_id": "648719001",
-        "detail_desc": "Short-sleeved dress in cotton jersey with a seam at the waist and bell-shaped skirt.",
-        "similarity": 0.251877499508695
+        "article_id": "709338002",
+        "detail_desc": "Short dress in a patterned viscose weave with a small stand-up collar with a button at the back of the neck and an opening front and back. Long sleeves with elastication at the cuffs and a seam with a flounce at the hem. Unlined.",
+        "similarity": 0.2571409805893565
     },
     {
         "article_id": "747015001",
         "detail_desc": "Short jersey dress with narrow shoulder straps, a seam at the waist and a flared skirt.",
-        "similarity": 0.31002339810800905
+        "similarity": 0.23808602980092494
     },
     {
         "article_id": "681180037",
         "detail_desc": "Short, sleeveless dress in sturdy jersey with a low-cut back, seam at the waist and flared skirt. The polyester content of the dress is partly recycled.",
-        "similarity": 0.3943999758440346
-    },
-    {
-        "article_id": "681179022",
-        "detail_desc": "Short, gently fitted dungaree dress in woven fabric with buttons down the front, wide, adjustable shoulder straps and a seam at the waist.",
-        "similarity": 0.22383250023290452
-    },
-    {
-        "article_id": "694291002",
-        "detail_desc": "Knee-length dress with cap sleeves, a round neckline, zip at the back and skirt with box pleats.",
-        "similarity": 0.20992035303289702
-    },
-    {
-        "article_id": "681237008",
-        "detail_desc": "Short jersey dress in jacquard-patterned jersey with short sleeves and a visible zip at the back. Unlined.",
-        "similarity": 0.23314311082606481
-    },
-    {
-        "article_id": "681179027",
-        "detail_desc": "Short, gently fitted dungaree dress in woven fabric with buttons down the front, wide, adjustable shoulder straps and a seam at the waist.",
-        "similarity": 0.22383250023290452
+        "similarity": 0.30288399190300047
     },
     {
         "article_id": "633977001",
         "detail_desc": "Short, V-neck dress in stretch jersey with a wrapover front with ties at one side, and long sleeves.",
-        "similarity": 0.2783661662027224
+        "similarity": 0.3624741226380497
     },
     {
         "article_id": "633977002",
         "detail_desc": "Short, V-neck dress in stretch jersey with a wrapover front with ties at one side, and long sleeves.",
-        "similarity": 0.2783661662027224
-    },
-    {
-        "article_id": "747198001",
-        "detail_desc": "Short dress in a patterned viscose weave with narrow, adjustable straps, a wrapover front with ties at one side and a flounced hem. Unlined.",
-        "similarity": 0.21603715545115873
+        "similarity": 0.3624741226380497
     },
     {
         "article_id": "633977004",
         "detail_desc": "Short, V-neck dress in stretch jersey with a wrapover front with ties at one side, and long sleeves.",
-        "similarity": 0.2783661662027224
+        "similarity": 0.3624741226380497
     },
     {
         "article_id": "729095001",
         "detail_desc": "Dress in a cr\u00eape weave with a V-neck, pleats at the front, long, cuffed sleeves and a narrow, detachable tie belt at the waist. Unlined.",
-        "similarity": 0.21198524108915479
+        "similarity": 0.2760362917814088
     },
     {
-        "article_id": "745475013",
-        "detail_desc": "Short dress in woven fabric with a small stand-up collar and V-neck opening at the top. Dropped shoulders, short sleeves and a rounded hem. Slightly longer at the back.",
-        "similarity": 0.20560737644833832
+        "article_id": "719946007",
+        "detail_desc": "Knee-length dress in a viscose cr\u00eape weave with a small stand-up collar and buttons down the front. Long sleeves with buttoned cuffs and a narrow, detachable tie belt at the waist. Unlined.",
+        "similarity": 0.24950784082134286
     },
     {
-        "article_id": "685429001",
-        "detail_desc": "Straight-cut dress in a viscose weave with a boat neck and short, open sleeves with ties. Unlined.",
-        "similarity": 0.2365423773696286
+        "article_id": "734426002",
+        "detail_desc": "Calf-length dress in airy satin with notch lapels, buttons down the front and a yoke at the back. Flap chest pockets, a drawstring at the waist and long sleeves with buttoned cuffs. Unlined.",
+        "similarity": 0.24244780939757782
     },
     {
         "article_id": "730153008",
         "detail_desc": "Short dress in an airy weave with pin-tucks at the top and an opening with a button at the back of the neck. Gathered seam at the waist and a gently flared skirt. Lace sections at the cuffs and hem. Jersey inner dress.",
-        "similarity": 0.3118032717025095
-    },
-    {
-        "article_id": "401044002",
-        "detail_desc": "Short dress in a washed viscose weave with a round neck, short sleeves with sewn-in turn-ups, and a rounded hem. Slightly longer at the back.",
-        "similarity": 0.20778062166325623
+        "similarity": 0.23945290417314402
     },
     {
         "article_id": "671217013",
         "detail_desc": "Short, fitted dress in sturdy, patterned jersey with short sleeves and ribbing around the neckline.",
-        "similarity": 0.26212982364664594
+        "similarity": 0.2013056091421323
     },
     {
-        "article_id": "736983002",
-        "detail_desc": "Maxi dress in woven fabric with a V-neck, sewn-in wrapover at the front and seam under the bust. Narrow, adjustable shoulder straps and a concealed zip at the back. Unlined.",
-        "similarity": 0.20420017585828606
-    },
-    {
-        "article_id": "401044029",
-        "detail_desc": "Short dress in a washed viscose weave with a round neck, short sleeves with sewn-in turn-ups, and a rounded hem. Slightly longer at the back.",
-        "similarity": 0.20778062166325623
+        "article_id": "691177005",
+        "detail_desc": "Short shirt dress in softly draping woven fabric with a sheen. Collar, concealed buttons down the front and a detachable tie belt at the waist. Long sleeves with buttoned cuffs, and a rounded hem. Unlined.",
+        "similarity": 0.23898053886928824
     },
     {
         "article_id": "688474005",
         "detail_desc": "Fitted dress in a soft rib knit with a V-neck front and back and long raglan sleeves.",
-        "similarity": 0.287248732881395
+        "similarity": 0.3740405446912279
     },
     {
-        "article_id": "401044038",
-        "detail_desc": "Short dress in a washed viscose weave with a round neck, short sleeves with sewn-in turn-ups, and a rounded hem. Slightly longer at the back.",
-        "similarity": 0.20778062166325623
+        "article_id": "301656029",
+        "detail_desc": "Long, straight-cut shirt in soft Tencel\u2122 lyocell denim with a collar and buttons down the front. Chest pockets with a pleat, and long sleeves with buttoned cuffs.",
+        "similarity": 0.20328449399043083
     }
 ]
