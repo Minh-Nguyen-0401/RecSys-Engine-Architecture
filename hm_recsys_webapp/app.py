@@ -121,8 +121,8 @@ def get_recommendations(customer_id):
         for _, row in filtered_articles.iterrows():
             recommendations.append({
                 'article_id': row['article_id'],
-                'prod_name': row['prod_name'],
-                'detail_desc': row['detail_desc'],
+                'prod_name': 'N/A' if pd.isna(row['prod_name']) else row['prod_name'],
+                'detail_desc': '' if pd.isna(row['detail_desc']) else row['detail_desc'],
                 'image_path': get_image_path(row['article_id'])
             })
 
@@ -214,8 +214,8 @@ def search():
         for _, row in filtered_results.head(100).iterrows():
             recommendations.append({
                 'article_id': row['article_id'],
-                'prod_name': row['prod_name'],
-                'detail_desc': row['detail_desc'],
+                'prod_name': 'N/A' if pd.isna(row['prod_name']) else row['prod_name'],
+                'detail_desc': '' if pd.isna(row['detail_desc']) else row['detail_desc'],
                 'image_path': get_image_path(row['article_id'])
             })
 
@@ -252,8 +252,8 @@ def filter_results():
         for _, row in filtered_results.head(100).iterrows():
             recommendations.append({
                 'article_id': row['article_id'],
-                'prod_name': row['prod_name'],
-                'detail_desc': row['detail_desc'],
+                'prod_name': 'N/A' if pd.isna(row['prod_name']) else row['prod_name'],
+                'detail_desc': '' if pd.isna(row['detail_desc']) else row['detail_desc'],
                 'image_path': get_image_path(row['article_id'])
             })
 

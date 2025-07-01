@@ -10,9 +10,16 @@ document.addEventListener('DOMContentLoaded', function() {
     loadInitialFilters();
 
     document.getElementById('customerSelect').addEventListener('change', function() {
-        console.log("Customer select changed.");
         currentCustomerId = this.value;
         if (currentCustomerId) {
+            // Manually reset filter dropdowns to 'All' to ensure a clean state
+            const filterSelects = document.querySelectorAll('.filter-select');
+            filterSelects.forEach(select => {
+                select.value = '';
+            });
+
+            // Fetch recommendations for the new customer. This will use the cleared filters
+            // and also repopulate the filter options based on the new user's data.
             getRecommendations(currentCustomerId);
         }
     });
@@ -31,7 +38,6 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function loadCustomers() {
-    console.log("loadCustomers() function called.");
     fetch('/get_customers')
         .then(response => response.json())
         .then(data => {
@@ -58,15 +64,26 @@ function loadCustomers() {
 
 function getRecommendations(customerId) {
     currentPage = 1;
-    const filters = getSelectedFilters();
-    const queryParams = new URLSearchParams(filters).toString();
+    const grid = document.getElementById('feedGrid');
+    grid.innerHTML = '<div class="text-center w-100"><div class="spinner-border" role="status"><span class="visually-hidden">Loading...</span></div></div>'; // Clear and show loading state
 
-    fetch(`/get_recommendations/${customerId}?${queryParams}`)
-        .then(response => response.json())
+    const filters = getSelectedFilters();
+    const queryParams = new URLSearchParams(filters);
+    queryParams.append('_', new Date().getTime()); // Cache-busting
+    const queryString = queryParams.toString();
+
+    fetch(`/get_recommendations/${customerId}?${queryString}`)
+        .then(response => {
+            if (!response.ok) {
+                return response.json().then(errorData => {
+                    throw new Error(errorData.error || `HTTP error! Status: ${response.status}`);
+                });
+            }
+            return response.json();
+        })
         .then(data => {
-            if (data.error) {
-                alert(data.error);
-                return;
+            if (data.error) { // Fallback for non-standard errors
+                throw new Error(data.error);
             }
             currentFeed = data.recommendations;
             populateFilters(data.filter_options);
@@ -74,11 +91,13 @@ function getRecommendations(customerId) {
             document.getElementById('feedSection').classList.remove('d-none');
             document.getElementById('resultsSection').classList.add('d-none');
         })
-        .catch(error => console.error('Error fetching recommendations:', error));
+        .catch(error => {
+            console.error('Error fetching recommendations:', error);
+            grid.innerHTML = `<div class="alert alert-danger w-100" role="alert">${error.message}</div>`;
+        });
 }
 
 function populateFilters(options) {
-    console.log("populateFilters() function called.");
     const filterContainer = document.getElementById('filterContainer');
     const existingValues = getSelectedFilters();
 
@@ -118,8 +137,7 @@ function populateFilters(options) {
 }
 
 function loadInitialFilters() {
-    console.log("loadInitialFilters() function called.");
-    fetch('/get_filter_options')
+    return fetch('/get_filter_options')
         .then(response => response.json())
         .then(data => {
             if (data.error) {
