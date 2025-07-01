@@ -3,30 +3,35 @@ let currentPage = 1;
 const itemsPerPage = 18;
 let currentFeed = [];
 let currentResults = [];
+let lastSearchType = null;
 
 document.addEventListener('DOMContentLoaded', function() {
     loadCustomers();
-    loadFilterOptions();
+    loadInitialFilters();
 
     document.getElementById('customerSelect').addEventListener('change', function() {
+        console.log("Customer select changed.");
         currentCustomerId = this.value;
         if (currentCustomerId) {
             getRecommendations(currentCustomerId);
         }
     });
 
-    document.getElementById('filterContainer').addEventListener('change', function(e) {
-        if (e.target.classList.contains('filter-select')) {
-            if (currentCustomerId) {
+    document.getElementById('filterContainer').addEventListener('change', function(event) {
+    
+        if (event.target.classList.contains('filter-select')) {
+    
+            if (lastSearchType === 'text' || lastSearchType === 'image') {
+                filterCurrentResults();
+            } else {
                 getRecommendations(currentCustomerId);
             }
         }
     });
-
-
 });
 
 function loadCustomers() {
+    console.log("loadCustomers() function called.");
     fetch('/get_customers')
         .then(response => response.json())
         .then(data => {
@@ -63,7 +68,8 @@ function getRecommendations(customerId) {
                 alert(data.error);
                 return;
             }
-            currentFeed = data;
+            currentFeed = data.recommendations;
+            populateFilters(data.filter_options);
             displayFeed();
             document.getElementById('feedSection').classList.remove('d-none');
             document.getElementById('resultsSection').classList.add('d-none');
@@ -71,7 +77,48 @@ function getRecommendations(customerId) {
         .catch(error => console.error('Error fetching recommendations:', error));
 }
 
-function loadFilterOptions() {
+function populateFilters(options) {
+    console.log("populateFilters() function called.");
+    const filterContainer = document.getElementById('filterContainer');
+    const existingValues = getSelectedFilters();
+
+    filterContainer.innerHTML = '';
+    for (const [key, values] of Object.entries(options)) {
+        const col = document.createElement('div');
+        col.className = 'col';
+        const label = document.createElement('label');
+        label.htmlFor = key;
+        label.className = 'form-label filter-label';
+        label.textContent = key.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+        
+        const select = document.createElement('select');
+        select.id = key;
+        select.className = 'form-select filter-select';
+        
+        const defaultOption = document.createElement('option');
+        defaultOption.value = '';
+        defaultOption.textContent = 'All';
+        select.appendChild(defaultOption);
+
+        values.forEach(value => {
+            const option = document.createElement('option');
+            option.value = value;
+            option.textContent = value;
+            select.appendChild(option);
+        });
+
+        if (existingValues[key]) {
+            select.value = existingValues[key];
+        }
+
+        col.appendChild(label);
+        col.appendChild(select);
+        filterContainer.appendChild(col);
+    }
+}
+
+function loadInitialFilters() {
+    console.log("loadInitialFilters() function called.");
     fetch('/get_filter_options')
         .then(response => response.json())
         .then(data => {
@@ -79,40 +126,13 @@ function loadFilterOptions() {
                 alert(data.error);
                 return;
             }
-            const filterContainer = document.getElementById('filterContainer');
-            filterContainer.innerHTML = '';
-            for (const [key, values] of Object.entries(data)) {
-                const col = document.createElement('div');
-                col.className = 'col';
-                const label = document.createElement('label');
-                label.htmlFor = key;
-                label.className = 'form-label filter-label';
-                label.textContent = key.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
-                
-                const select = document.createElement('select');
-                select.id = key;
-                select.className = 'form-select filter-select';
-                
-                const defaultOption = document.createElement('option');
-                defaultOption.value = '';
-                defaultOption.textContent = 'All';
-                select.appendChild(defaultOption);
-
-                values.forEach(value => {
-                    const option = document.createElement('option');
-                    option.value = value;
-                    option.textContent = value;
-                    select.appendChild(option);
-                });
-                col.appendChild(label);
-                col.appendChild(select);
-                filterContainer.appendChild(col);
-            }
+            populateFilters(data);
         })
-        .catch(error => console.error('Error loading filters:', error));
+        .catch(error => console.error('Error loading initial filter options:', error));
 }
 
 function getSelectedFilters() {
+    console.log("getSelectedFilters() function called.");
     const filters = {};
     document.querySelectorAll('.filter-select').forEach(select => {
         if (select.value) {
@@ -123,6 +143,7 @@ function getSelectedFilters() {
 }
 
 function displayFeed() {
+    console.log("displayFeed() function called.");
     const start = (currentPage - 1) * itemsPerPage;
     const end = start + itemsPerPage;
     const pageItems = currentFeed.slice(start, end);
@@ -150,6 +171,7 @@ function displayFeed() {
 }
 
 function updatePagination(elementId, totalItems, currentPage, type) {
+    console.log("updatePagination() function called.");
     const pagination = document.getElementById(elementId);
     pagination.innerHTML = '';
     const totalPages = Math.ceil(totalItems / itemsPerPage);
@@ -191,6 +213,7 @@ function updatePagination(elementId, totalItems, currentPage, type) {
 }
 
 function changePage(page, type) {
+    console.log("changePage() function called.");
     const totalItems = type === 'feed' ? currentFeed.length : currentResults.length;
     const totalPages = Math.ceil(totalItems / itemsPerPage);
     if (page < 1 || page > totalPages) return;
@@ -212,6 +235,7 @@ function search(searchType) {
     const formData = new FormData();
     formData.append('customer_id', currentCustomerId);
     formData.append('search_type', searchType);
+    lastSearchType = searchType;
 
     const filters = getSelectedFilters();
     for (const [key, value] of Object.entries(filters)) {
@@ -244,13 +268,39 @@ function search(searchType) {
             alert('Search error: ' + data.error);
             return;
         }
-        currentResults = data;
+        currentResults = data.recommendations;
+        populateFilters(data.filter_options);
         currentPage = 1;
         document.getElementById('feedSection').classList.add('d-none');
         document.getElementById('resultsSection').classList.remove('d-none');
         displayResults();
     })
     .catch(error => console.error('Error:', error));
+}
+
+function filterCurrentResults() {
+    const formData = new FormData();
+    const filters = getSelectedFilters();
+    for (const [key, value] of Object.entries(filters)) {
+        formData.append(key, value);
+    }
+
+    fetch('/filter_results', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.error) {
+            alert('Filter error: ' + data.error);
+            return;
+        }
+        currentResults = data.recommendations;
+        populateFilters(data.filter_options);
+        currentPage = 1;
+        displayResults();
+    })
+    .catch(error => console.error('Error filtering results:', error));
 }
 
 function displayResults() {
@@ -281,9 +331,20 @@ function displayResults() {
 }
 
 function clearSearch() {
+    fetch('/clear_search', { method: 'POST' })
+    .then(response => response.json())
+    .then(data => {
+        if (data.status === 'success') {
+            console.log('Search cleared on server.');
+        } else {
+            console.error('Failed to clear search on server:', data.message);
+        }
+    }).catch(error => console.error('Error clearing search:', error));
+
+    lastSearchType = null;
     document.getElementById('textQuery').value = '';
     document.getElementById('imageUpload').value = '';
     document.getElementById('resultsSection').classList.add('d-none');
     document.getElementById('feedSection').classList.remove('d-none');
-    displayFeed();
+    loadInitialFilters(); // Restore initial filters
 }

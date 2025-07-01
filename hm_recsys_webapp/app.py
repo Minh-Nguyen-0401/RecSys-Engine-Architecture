@@ -2,8 +2,13 @@ import os
 import sys
 import json
 import pandas as pd
-from flask import Flask, render_template, request, jsonify, send_from_directory
+from flask import Flask, request, jsonify, render_template, session, send_from_directory
 from pathlib import Path
+import pandas as pd
+import json
+import subprocess
+import os
+import uuid
 
 # Add the parent directory to sys.path to access existing modules
 HM_TWO_STEP_RECO_DIR = Path(__file__).resolve().parent.parent
@@ -12,7 +17,12 @@ sys.path.append(str(HM_TWO_STEP_RECO_DIR))
 from online_pipeline import run_online_recommend
 
 app = Flask(__name__)
+
+# Create a temporary folder for storing large search results
+TEMP_FOLDER = Path(__file__).resolve().parent / 'temp_results'
+TEMP_FOLDER.mkdir(exist_ok=True)
 app.config['UPLOAD_FOLDER'] = os.path.join('static', 'uploads')
+app.secret_key = 'a_super_secret_key_for_sessions'  # Required for session management
 
 # Ensure upload folder exists
 os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
@@ -22,7 +32,23 @@ INFERENCE_RESULTS_PATH = HM_TWO_STEP_RECO_DIR / 'two_tower_cg' / 'refactor' / 'o
 ARTICLES_PATH = HM_TWO_STEP_RECO_DIR / 'data' / 'articles.csv'
 OUTPUT_DIR = HM_TWO_STEP_RECO_DIR / 'output'
 
+# Map frontend filter keys to backend dataframe column names
+FILTER_COLUMN_MAP = {
+    'product_type': 'product_type_name',
+    'product_group': 'product_group_name',
+    'department': 'department_name',
+    'colour_group': 'colour_group_name',
+    'graphical_appearance': 'graphical_appearance_name'
+}
+
 # Load articles data for descriptions and image paths
+def get_dynamic_filter_options(df):
+    options = {}
+    for key, column in FILTER_COLUMN_MAP.items():
+        if column in df.columns:
+            options[key] = sorted(df[column].dropna().unique().tolist())
+    return options
+
 def load_articles_data():
     articles_df = pd.read_csv(ARTICLES_PATH)
     articles_df['article_id'] = articles_df['article_id'].astype(str)
@@ -45,10 +71,10 @@ def get_filter_options():
     try:
         articles_df = load_articles_data()
         filters = {
-            'product_type_name': sorted(articles_df['product_type_name'].dropna().unique().tolist()),
-            'product_group_name': sorted(articles_df['product_group_name'].dropna().unique().tolist()),
-            'department_name': sorted(articles_df['department_name'].dropna().unique().tolist()),
-            'colour_group_name': sorted(articles_df['colour_group_name'].dropna().unique().tolist()),
+            'product_type': sorted(articles_df['product_type_name'].dropna().unique().tolist()),
+            'product_group': sorted(articles_df['product_group_name'].dropna().unique().tolist()),
+            'department': sorted(articles_df['department_name'].dropna().unique().tolist()),
+            'colour_group': sorted(articles_df['colour_group_name'].dropna().unique().tolist()),
             'graphical_appearance': sorted(articles_df['graphical_appearance_name'].dropna().unique().tolist())
         }
         return jsonify(filters)
@@ -78,12 +104,18 @@ def get_recommendations(customer_id):
         article_ids = reranked_df['predicted_article_ids'].iloc[0].split(' ')[:300]
         articles_df = load_articles_data()
 
-        # Apply filters
+        # Get the full set of recommended articles for this user to generate dynamic filters
+        recommended_articles_df = articles_df[articles_df['article_id'].isin(article_ids)]
+        dynamic_options = get_dynamic_filter_options(recommended_articles_df)
+
+        # Now, apply filters from the request to the recommended articles
+        filtered_articles = recommended_articles_df.copy()
         filters = request.args
-        filtered_articles = articles_df[articles_df['article_id'].isin(article_ids)]
         for key, value in filters.items():
-            if value and key in filtered_articles.columns:
-                filtered_articles = filtered_articles[filtered_articles[key] == value]
+            if value and key in FILTER_COLUMN_MAP:
+                column_name = FILTER_COLUMN_MAP[key]
+                if column_name in filtered_articles.columns:
+                    filtered_articles = filtered_articles[filtered_articles[column_name] == value]
 
         recommendations = []
         for _, row in filtered_articles.iterrows():
@@ -94,7 +126,7 @@ def get_recommendations(customer_id):
                 'image_path': get_image_path(row['article_id'])
             })
 
-        return jsonify(recommendations)
+        return jsonify({'recommendations': recommendations, 'filter_options': dynamic_options})
     except Exception as e:
         return jsonify({'error': str(e)}), 500
 
@@ -107,10 +139,24 @@ def serve_image(path):
 
 @app.route('/search', methods=['POST'])
 def search():
+    # Clean up previous temp file if it exists for this session
+    if 'last_results_path' in session:
+        results_path = session.pop('last_results_path', None)
+        if results_path and os.path.exists(results_path):
+            try:
+                os.remove(results_path)
+                app.logger.info(f"Removed old temp file: {results_path}")
+            except OSError as e:
+                app.logger.error(f"Error removing old temp file: {e}")
+
+    session.pop('last_search_type', None)
     try:
         customer_id = request.form.get('customer_id')
         search_type = request.form.get('search_type')
-        query = request.form.get('query', '')
+        
+        if search_type == 'text':
+            query = request.form.get('query', 'shirt').strip()
+            app.logger.info(f"Received text search query: '{query}'")
 
         if search_type == 'image':
             if 'file' not in request.files:
@@ -144,14 +190,28 @@ def search():
                 full_results = full_results.drop(columns=['detail_desc_x'])
             full_results = full_results.rename(columns={'detail_desc_y': 'detail_desc'})
 
-        # Apply filters
+        # Generate dynamic options from the full, unfiltered results
+        dynamic_options = get_dynamic_filter_options(full_results)
+
+        # Save results to a temporary file and store the path in the session
+        results_filename = f"{uuid.uuid4()}.parquet"
+        results_filepath = str(TEMP_FOLDER / results_filename)
+        full_results.to_parquet(results_filepath)
+        session['last_results_path'] = results_filepath
+        app.logger.info(f"Saved search results to {results_filepath}")
+        app.logger.info(f"Set session keys after search: {list(session.keys())}")
+
+        # Apply filters from the initial search request
+        filtered_results = full_results.copy()
         filters = request.form
         for key, value in filters.items():
-            if value and key in full_results.columns:
-                full_results = full_results[full_results[key] == value]
+            if value and key in FILTER_COLUMN_MAP:
+                column_name = FILTER_COLUMN_MAP[key]
+                if column_name in filtered_results.columns:
+                    filtered_results = filtered_results[filtered_results[column_name] == value]
 
         recommendations = []
-        for _, row in full_results.head(100).iterrows(): # Limit to top 100
+        for _, row in filtered_results.head(100).iterrows():
             recommendations.append({
                 'article_id': row['article_id'],
                 'prod_name': row['prod_name'],
@@ -159,9 +219,68 @@ def search():
                 'image_path': get_image_path(row['article_id'])
             })
 
-        return jsonify(recommendations)
+        return jsonify({'recommendations': recommendations, 'filter_options': dynamic_options})
     except Exception as e:
         return jsonify({'error': str(e)}), 500
+
+@app.route('/filter_results', methods=['POST'])
+def filter_results():
+    try:
+        app.logger.info(f"Filter request. Session keys: {list(session.keys())}")
+        if 'last_results_path' not in session:
+            return jsonify({'error': 'No search results to filter. Please perform a new search.'}), 400
+
+        results_path = session['last_results_path']
+        if not os.path.exists(results_path):
+            return jsonify({'error': 'Search results have expired or been cleared. Please perform a new search.'}), 400
+
+        results_df = pd.read_parquet(results_path)
+
+        # Re-generate dynamic options from the full cached results to keep the session small
+        dynamic_options = get_dynamic_filter_options(results_df)
+
+        # Apply new filters from the request
+        filtered_results = results_df.copy()
+        filters = request.form
+        for key, value in filters.items():
+            if value and key in FILTER_COLUMN_MAP:
+                column_name = FILTER_COLUMN_MAP[key]
+                if column_name in filtered_results.columns:
+                    filtered_results = filtered_results[filtered_results[column_name] == value]
+
+        recommendations = []
+        for _, row in filtered_results.head(100).iterrows():
+            recommendations.append({
+                'article_id': row['article_id'],
+                'prod_name': row['prod_name'],
+                'detail_desc': row['detail_desc'],
+                'image_path': get_image_path(row['article_id'])
+            })
+
+        return jsonify({'recommendations': recommendations, 'filter_options': dynamic_options})
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+
+@app.route('/clear_search', methods=['POST'])
+def clear_search():
+    try:
+        # Clear the last search results path and type from the session
+        if 'last_results_path' in session:
+            results_path = session.pop('last_results_path', None)
+            if results_path and os.path.exists(results_path):
+                try:
+                    os.remove(results_path)
+                    app.logger.info(f"Removed temp file: {results_path}")
+                except OSError as e:
+                    app.logger.error(f"Error removing temp file: {e}")
+
+        session.pop('last_search_type', None)
+        app.logger.info(f"Cleared search. Session keys: {list(session.keys())}")
+        return jsonify({'status': 'success'})
+    except Exception as e:
+        app.logger.error(f"Error clearing search: {e}")
+        return jsonify({'status': 'error', 'message': str(e)}), 500
+
 
 if __name__ == '__main__':
     app.run(debug=True)
