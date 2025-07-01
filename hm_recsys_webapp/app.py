@@ -211,7 +211,7 @@ def search():
                     filtered_results = filtered_results[filtered_results[column_name] == value]
 
         recommendations = []
-        for _, row in filtered_results.head(100).iterrows():
+        for _, row in filtered_results.head(300).iterrows():
             recommendations.append({
                 'article_id': row['article_id'],
                 'prod_name': 'N/A' if pd.isna(row['prod_name']) else row['prod_name'],
@@ -249,7 +249,7 @@ def filter_results():
                     filtered_results = filtered_results[filtered_results[column_name] == value]
 
         recommendations = []
-        for _, row in filtered_results.head(100).iterrows():
+        for _, row in filtered_results.head(300).iterrows():
             recommendations.append({
                 'article_id': row['article_id'],
                 'prod_name': 'N/A' if pd.isna(row['prod_name']) else row['prod_name'],
