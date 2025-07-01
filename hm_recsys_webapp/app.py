@@ -101,11 +101,13 @@ def get_recommendations(customer_id):
         if reranked_df.empty or 'predicted_article_ids' not in reranked_df.columns:
             return jsonify({'error': 'No recommendations available'}), 404
 
-        article_ids = reranked_df['predicted_article_ids'].iloc[0].split(' ')[:300]
+        article_ids = reranked_df['predicted_article_ids'].iloc[0].split(' ')[:5000]
         articles_df = load_articles_data()
 
         # Get the full set of recommended articles for this user to generate dynamic filters
         recommended_articles_df = articles_df[articles_df['article_id'].isin(article_ids)]
+        recommended_articles_df = recommended_articles_df.set_index('article_id').reindex(article_ids).reset_index()
+
         dynamic_options = get_dynamic_filter_options(recommended_articles_df)
 
         # Now, apply filters from the request to the recommended articles
@@ -211,7 +213,7 @@ def search():
                     filtered_results = filtered_results[filtered_results[column_name] == value]
 
         recommendations = []
-        for _, row in filtered_results.head(300).iterrows():
+        for _, row in filtered_results.head(2000).iterrows():
             recommendations.append({
                 'article_id': row['article_id'],
                 'prod_name': 'N/A' if pd.isna(row['prod_name']) else row['prod_name'],
@@ -249,7 +251,7 @@ def filter_results():
                     filtered_results = filtered_results[filtered_results[column_name] == value]
 
         recommendations = []
-        for _, row in filtered_results.head(300).iterrows():
+        for _, row in filtered_results.head(2000).iterrows():
             recommendations.append({
                 'article_id': row['article_id'],
                 'prod_name': 'N/A' if pd.isna(row['prod_name']) else row['prod_name'],
