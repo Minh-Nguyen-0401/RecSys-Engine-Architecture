@@ -1,6 +1,6 @@
 ---
 title: "H&M Recommendation System: Modelling Architecture"
-author: "Minh N.D., Chi T.T.Q., Duy N.V., Anh D.T.H., Anh N.Q., Linh N.H."
+author: "Minh N.D. et al."
 date: "2025-07-01"
 documentclass: report
 classoption:
