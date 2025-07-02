@@ -1,442 +1,847 @@
 [
     {
-        "article_id": "738731006",
-        "detail_desc": "Calf-length dress in soft cotton jersey with short sleeves, an elasticated seam at the waist and a wrapover skirt. Unlined.",
-        "similarity": 0.20371439066903418
+        "article_id": "624486090",
+        "detail_desc": "Short, fitted top in ribbed cotton jersey with short sleeves.",
+        "similarity": 0.21739187509478625
     },
     {
-        "article_id": "496762004",
-        "detail_desc": "Short dress in soft jersey with a V-neck, narrow, adjustable shoulder straps, seam at the waist and flared skirt.",
-        "similarity": 0.21398258344680007
+        "article_id": "711053037",
+        "detail_desc": "Long T-shirt in soft jersey made from a cotton blend with short sleeves with sewn-in turn-ups.",
+        "similarity": 0.238009341844252
     },
     {
-        "article_id": "502522001",
-        "detail_desc": "Short dress in cotton jersey with long sleeves.",
-        "similarity": 0.6342245128740723
+        "article_id": "711053036",
+        "detail_desc": "Long T-shirt in soft jersey made from a cotton blend with short sleeves with sewn-in turn-ups.",
+        "similarity": 0.238009341844252
     },
     {
-        "article_id": "676979010",
-        "detail_desc": "Short, fitted, sleeveless dress in soft jersey.",
-        "similarity": 0.3042737489202692
+        "article_id": "649440048",
+        "detail_desc": "T-shirt in printed cotton jersey.",
+        "similarity": 0.23529652472362034
+    },
+    {
+        "article_id": "699923112",
+        "detail_desc": "T-shirt in soft, printed cotton jersey.",
+        "similarity": 0.2249296047579838
+    },
+    {
+        "article_id": "554598087",
+        "detail_desc": "T-shirt in soft jersey with a round neck, short sleeves with sewn-in turn-ups, and a rounded hem.",
+        "similarity": 0.23751628577958755
+    },
+    {
+        "article_id": "711053004",
+        "detail_desc": "Long T-shirt in soft jersey made from a cotton blend with short sleeves with sewn-in turn-ups.",
+        "similarity": 0.238009341844252
+    },
+    {
+        "article_id": "699923008",
+        "detail_desc": "T-shirt in soft, printed cotton jersey.",
+        "similarity": 0.2249296047579838
+    },
+    {
+        "article_id": "630777015",
+        "detail_desc": "Straight-style T-shirt in soft cotton jersey with ribbing around the neckline.",
+        "similarity": 0.5665772245355802
+    },
+    {
+        "article_id": "699923109",
+        "detail_desc": "T-shirt in soft, printed cotton jersey.",
+        "similarity": 0.2249296047579838
+    },
+    {
+        "article_id": "649439006",
+        "detail_desc": "T-shirt in a jacquard-knit cotton blend with short sleeves, an open chest pocket and slits in the sides.",
+        "similarity": 0.21063965483972963
+    },
+    {
+        "article_id": "707777011",
+        "detail_desc": "Short, boxy-style jacket in washed denim with a collar, buttons down the front, dropped shoulders and long sleeves with buttoned cuffs. Flap chest pockets with a button and side pockets.",
+        "similarity": 0.2929915576535587
+    },
+    {
+        "article_id": "630777012",
+        "detail_desc": "Straight-style T-shirt in soft cotton jersey with ribbing around the neckline.",
+        "similarity": 0.5665772245355802
+    },
+    {
+        "article_id": "699923119",
+        "detail_desc": "T-shirt in soft, printed cotton jersey.",
+        "similarity": 0.2249296047579838
+    },
+    {
+        "article_id": "699923113",
+        "detail_desc": "T-shirt in soft, printed cotton jersey.",
+        "similarity": 0.2249296047579838
+    },
+    {
+        "article_id": "671777035",
+        "detail_desc": "T-shirt in printed jersey with a chest pocket and short sleeves with sewn-in turn-ups.",
+        "similarity": 0.22096002987498092
+    },
+    {
+        "article_id": "699924003",
+        "detail_desc": "Short-sleeved polo shirt in cotton jersey with a collar, button placket and slits in the sides.",
+        "similarity": 0.21617497146869596
+    },
+    {
+        "article_id": "654410027",
+        "detail_desc": "Short-sleeved polo shirt in cotton piqu\u00e9 with a ribbed collar and button placket.",
+        "similarity": 0.20403823440581337
+    },
+    {
+        "article_id": "699923103",
+        "detail_desc": "T-shirt in soft, printed cotton jersey.",
+        "similarity": 0.2249296047579838
+    },
+    {
+        "article_id": "699923107",
+        "detail_desc": "T-shirt in soft, printed cotton jersey.",
+        "similarity": 0.2249296047579838
+    },
+    {
+        "article_id": "576897001",
+        "detail_desc": "Short, off-the-shoulder top in a soft, ribbed cotton blend with short sleeves.",
+        "similarity": 0.20516687711690929
+    },
+    {
+        "article_id": "570004107",
+        "detail_desc": "Short-sleeved polo shirt in soft jersey with a collar and button placket.",
+        "similarity": 0.24224925134801273
+    },
+    {
+        "article_id": "570002096",
+        "detail_desc": "Round-necked T-shirt in soft jersey.",
+        "similarity": 0.2238106907309886
+    },
+    {
+        "article_id": "554598077",
+        "detail_desc": "T-shirt in soft jersey with a round neck, short sleeves with sewn-in turn-ups, and a rounded hem.",
+        "similarity": 0.23751628577958755
+    },
+    {
+        "article_id": "624486092",
+        "detail_desc": "Short, fitted top in ribbed cotton jersey with short sleeves.",
+        "similarity": 0.21739187509478625
+    },
+    {
+        "article_id": "624486010",
+        "detail_desc": "Short, fitted top in ribbed cotton jersey with short sleeves.",
+        "similarity": 0.21739187509478625
+    },
+    {
+        "article_id": "570002073",
+        "detail_desc": "Round-necked T-shirt in soft jersey.",
+        "similarity": 0.2238106907309886
+    },
+    {
+        "article_id": "570004078",
+        "detail_desc": "Short-sleeved polo shirt in soft jersey with a collar and button placket.",
+        "similarity": 0.24224925134801273
+    },
+    {
+        "article_id": "630777018",
+        "detail_desc": "Straight-style T-shirt in soft cotton jersey with ribbing around the neckline.",
+        "similarity": 0.5665772245355802
+    },
+    {
+        "article_id": "699923068",
+        "detail_desc": "T-shirt in soft, printed cotton jersey.",
+        "similarity": 0.2249296047579838
+    },
+    {
+        "article_id": "739529001",
+        "detail_desc": "T-shirt in slub linen jersey with a round neckline, short sleeves and straight-cut hem.",
+        "similarity": 0.23178077780942213
     },
     {
         "article_id": "716348001",
         "detail_desc": "Short T-shirt dress in soft viscose jersey.",
-        "similarity": 0.3225994714044241
+        "similarity": 0.38556915037534856
     },
     {
-        "article_id": "681180031",
-        "detail_desc": "Short, sleeveless dress in sturdy jersey with a low-cut back, seam at the waist and flared skirt. The polyester content of the dress is partly recycled.",
-        "similarity": 0.30288399190300047
+        "article_id": "570002093",
+        "detail_desc": "Round-necked T-shirt in soft jersey.",
+        "similarity": 0.2238106907309886
     },
     {
-        "article_id": "676979009",
-        "detail_desc": "Short, fitted, sleeveless dress in soft jersey.",
-        "similarity": 0.3042737489202692
+        "article_id": "570003067",
+        "detail_desc": "V-neck T-shirt in soft cotton jersey.",
+        "similarity": 0.30245742671021625
     },
     {
-        "article_id": "316441005",
-        "detail_desc": "Long-sleeved top in soft jersey.",
-        "similarity": 0.24844742485904528
+        "article_id": "699923106",
+        "detail_desc": "T-shirt in soft, printed cotton jersey.",
+        "similarity": 0.2249296047579838
     },
     {
-        "article_id": "646676005",
-        "detail_desc": "Long dress in woven fabric with a V-neck, wrapover front, wide tie at the waist and short, double-layered sleeves. Unlined.",
-        "similarity": 0.3043421448471242
+        "article_id": "624486091",
+        "detail_desc": "Short, fitted top in ribbed cotton jersey with short sleeves.",
+        "similarity": 0.21739187509478625
     },
     {
-        "article_id": "708430002",
-        "detail_desc": "Long dress in viscose jersey with a lace bodice. Wide neckline with a V-neck at the back, short cap sleeves and a concealed zip at the back.",
-        "similarity": 0.289518902593146
+        "article_id": "735617002",
+        "detail_desc": "Straight-style blouse in soft, double-layered cotton with embroidery. V-neck with ties at the top and long, slightly wider sleeves with narrow elastication at the cuffs.",
+        "similarity": 0.24332811929172263
     },
     {
-        "article_id": "543310001",
-        "detail_desc": "Short dress in a viscose weave with a visible seam centre back, long sleeves with a zip at the cuffs, and a rounded hem.",
-        "similarity": 0.28397303837916255
+        "article_id": "649439005",
+        "detail_desc": "T-shirt in a jacquard-knit cotton blend with short sleeves, an open chest pocket and slits in the sides.",
+        "similarity": 0.21063965483972963
     },
     {
-        "article_id": "685942001",
-        "detail_desc": "Long dress in an airy weave in a narrow cut at the top with flounces around the armholes, short, narrow shoulder straps and a concealed zip at the back. Seam at the waist and a wide skirt with gathers at the top. Lined.",
-        "similarity": 0.22203150124361215
+        "article_id": "576897007",
+        "detail_desc": "Short, off-the-shoulder top in a soft, ribbed cotton blend with short sleeves.",
+        "similarity": 0.20516687711690929
     },
     {
-        "article_id": "316441001",
-        "detail_desc": "Long-sleeved top in soft jersey.",
-        "similarity": 0.24844742485904528
+        "article_id": "624486002",
+        "detail_desc": "Short, fitted top in ribbed cotton jersey with short sleeves.",
+        "similarity": 0.21739187509478625
     },
     {
-        "article_id": "589835001",
-        "detail_desc": "Short, fitted lace dress with V-neck, gathers at the front and long, transparent sleeves. Contrasting colour lining front and back.",
-        "similarity": 0.2382398291712341
+        "article_id": "671777042",
+        "detail_desc": "T-shirt in printed jersey with a chest pocket and short sleeves with sewn-in turn-ups.",
+        "similarity": 0.22096002987498092
     },
     {
-        "article_id": "685009006",
-        "detail_desc": "Fitted dress in stretch jersey with a V-neck, long sleeves and a decorative knot at the front.",
-        "similarity": 0.35954137247286766
+        "article_id": "592743055",
+        "detail_desc": "T-shirt in printed cotton jersey.",
+        "similarity": 0.23529652472362034
     },
     {
-        "article_id": "709987009",
-        "detail_desc": "Short, V-neck dress in woven fabric with a small stand-up collar and buttons at the top. Long sleeves with wide, buttoned cuffs, an elasticated seam at the waist and a decorative belt with a metal buckle.",
-        "similarity": 0.2508453107738696
+        "article_id": "630323040",
+        "detail_desc": "T-shirt in printed cotton jersey.",
+        "similarity": 0.23529652472362034
     },
     {
-        "article_id": "746627002",
-        "detail_desc": "Short dress in a patterned cr\u00eape weave with buttons down the front, a seam at the waist and 3/4-length sleeves. Unlined.",
-        "similarity": 0.21727491321503276
+        "article_id": "721683003",
+        "detail_desc": "Round-necked T-shirt in stretch cotton jersey.",
+        "similarity": 0.20428451930990632
     },
     {
-        "article_id": "458239017",
-        "detail_desc": "Short-sleeved dress in soft cotton jersey.",
-        "similarity": 0.3230891379664342
+        "article_id": "697060013",
+        "detail_desc": "Longer-style top in a viscose cr\u00eape weave with a round neckline and an opening with a concealed button at the back of the neck. Short sleeves and a rounded hem.",
+        "similarity": 0.3560664844494591
     },
     {
-        "article_id": "706509007",
-        "detail_desc": "Short, fitted dress in soft jersey with a round neckline and long sleeves.",
-        "similarity": 0.46015779659884853
+        "article_id": "624486059",
+        "detail_desc": "Short, fitted top in ribbed cotton jersey with short sleeves.",
+        "similarity": 0.21739187509478625
     },
     {
-        "article_id": "617245002",
-        "detail_desc": "Long, sleeveless dress in airy chiffon with pleats at the top and an opening with a button at the back of the neck. Seam at the waist with a short gathered frill and decorative narrow ties at the sides, and a gathered, draped skirt. Lined.",
-        "similarity": 0.20946621134413562
+        "article_id": "649440034",
+        "detail_desc": "T-shirt in printed cotton jersey.",
+        "similarity": 0.23529652472362034
     },
     {
-        "article_id": "568838009",
-        "detail_desc": "Short, sleeveless dress in a cr\u00eape weave with pleats at the top and a small opening at the back. Lined.",
-        "similarity": 0.201894225805598
+        "article_id": "570003078",
+        "detail_desc": "V-neck T-shirt in soft cotton jersey.",
+        "similarity": 0.30245742671021625
     },
     {
-        "article_id": "458239022",
-        "detail_desc": "Short-sleeved dress in soft cotton jersey.",
-        "similarity": 0.3230891379664342
+        "article_id": "649440037",
+        "detail_desc": "T-shirt in printed cotton jersey.",
+        "similarity": 0.23529652472362034
+    },
+    {
+        "article_id": "624486081",
+        "detail_desc": "Short, fitted top in ribbed cotton jersey with short sleeves.",
+        "similarity": 0.21739187509478625
+    },
+    {
+        "article_id": "654410023",
+        "detail_desc": "Short-sleeved polo shirt in cotton piqu\u00e9 with a ribbed collar and button placket.",
+        "similarity": 0.20403823440581337
+    },
+    {
+        "article_id": "699923090",
+        "detail_desc": "T-shirt in soft, printed cotton jersey.",
+        "similarity": 0.2249296047579838
+    },
+    {
+        "article_id": "570003083",
+        "detail_desc": "V-neck T-shirt in soft cotton jersey.",
+        "similarity": 0.30245742671021625
+    },
+    {
+        "article_id": "658329018",
+        "detail_desc": "Short-sleeved polo shirt in stretch cotton jersey with a collar and button placket. Slim fit.",
+        "similarity": 0.2055006375223102
+    },
+    {
+        "article_id": "624486005",
+        "detail_desc": "Short, fitted top in ribbed cotton jersey with short sleeves.",
+        "similarity": 0.21739187509478625
+    },
+    {
+        "article_id": "570002081",
+        "detail_desc": "Round-necked T-shirt in soft jersey.",
+        "similarity": 0.2238106907309886
+    },
+    {
+        "article_id": "570002086",
+        "detail_desc": "Round-necked T-shirt in soft jersey.",
+        "similarity": 0.2238106907309886
+    },
+    {
+        "article_id": "570003073",
+        "detail_desc": "V-neck T-shirt in soft cotton jersey.",
+        "similarity": 0.30245742671021625
+    },
+    {
+        "article_id": "630777013",
+        "detail_desc": "Straight-style T-shirt in soft cotton jersey with ribbing around the neckline.",
+        "similarity": 0.5665772245355802
+    },
+    {
+        "article_id": "658329019",
+        "detail_desc": "Short-sleeved polo shirt in stretch cotton jersey with a collar and button placket. Slim fit.",
+        "similarity": 0.2055006375223102
+    },
+    {
+        "article_id": "630777016",
+        "detail_desc": "Straight-style T-shirt in soft cotton jersey with ribbing around the neckline.",
+        "similarity": 0.5665772245355802
     },
     {
         "article_id": "681176046",
         "detail_desc": "Short, fitted dress in soft jersey with short sleeves.",
-        "similarity": 0.2928573293040289
+        "similarity": 0.23420467571964276
     },
     {
-        "article_id": "730153001",
-        "detail_desc": "Short dress in an airy weave with pin-tucks at the top and an opening with a button at the back of the neck. Gathered seam at the waist and a gently flared skirt. Lace sections at the cuffs and hem. Jersey inner dress.",
-        "similarity": 0.23945290417314402
+        "article_id": "683123021",
+        "detail_desc": "Pyjamas with a T-shirt and shorts in cotton jersey. T-shirt with a motif on the chest. Patterned shorts with an elasticated waist, side pockets and fake fly.",
+        "similarity": 0.21563636142890022
     },
     {
-        "article_id": "646676003",
-        "detail_desc": "Long dress in woven fabric with a V-neck, wrapover front, wide tie at the waist and short, double-layered sleeves. Unlined.",
-        "similarity": 0.3043421448471242
+        "article_id": "570002079",
+        "detail_desc": "Round-necked T-shirt in soft jersey.",
+        "similarity": 0.2238106907309886
     },
     {
-        "article_id": "714718002",
-        "detail_desc": "Short, flounced dress in soft, woven viscose with a wrapover front, long-sleeves, a seam at the waist and a tie at the side. Unlined.",
-        "similarity": 0.30641823069376584
+        "article_id": "570002074",
+        "detail_desc": "Round-necked T-shirt in soft jersey.",
+        "similarity": 0.2238106907309886
     },
     {
-        "article_id": "509210006",
-        "detail_desc": "Long top in soft, ribbed jersey with long sleeves, high slits in the sides and a rounded, raw-edge hem. Longer at the back.",
-        "similarity": 0.23139299823570567
+        "article_id": "671777040",
+        "detail_desc": "T-shirt in printed jersey with a chest pocket and short sleeves with sewn-in turn-ups.",
+        "similarity": 0.22096002987498092
     },
     {
-        "article_id": "714620007",
-        "detail_desc": "Short dress in a patterned viscose weave with a collar and buttons down the front. Long sleeves with narrow elastication at the cuffs, a seam at the waist and a gently flared skirt. Unlined.",
-        "similarity": 0.28518294606087097
+        "article_id": "699923099",
+        "detail_desc": "T-shirt in soft, printed cotton jersey.",
+        "similarity": 0.2249296047579838
     },
     {
-        "article_id": "596400008",
-        "detail_desc": "Long-sleeved top in soft cotton jersey.",
-        "similarity": 0.23205035324924245
+        "article_id": "658329031",
+        "detail_desc": "Short-sleeved polo shirt in stretch cotton jersey with a collar and button placket. Slim fit.",
+        "similarity": 0.2055006375223102
     },
     {
-        "article_id": "676979002",
-        "detail_desc": "Short, fitted, sleeveless dress in soft jersey.",
-        "similarity": 0.3042737489202692
+        "article_id": "570003082",
+        "detail_desc": "V-neck T-shirt in soft cotton jersey.",
+        "similarity": 0.30245742671021625
     },
     {
-        "article_id": "212629004",
-        "detail_desc": "Long, sleeveless dress in jersey with narrow shoulder straps and an elasticated seam at the waist. Unlined.",
-        "similarity": 0.38764459839979126
+        "article_id": "624486028",
+        "detail_desc": "Short, fitted top in ribbed cotton jersey with short sleeves.",
+        "similarity": 0.21739187509478625
     },
     {
-        "article_id": "543310004",
-        "detail_desc": "Short dress in a viscose weave with a visible seam centre back, long sleeves with a zip at the cuffs, and a rounded hem.",
-        "similarity": 0.28397303837916255
+        "article_id": "570003056",
+        "detail_desc": "V-neck T-shirt in soft cotton jersey.",
+        "similarity": 0.30245742671021625
+    },
+    {
+        "article_id": "624486068",
+        "detail_desc": "Short, fitted top in ribbed cotton jersey with short sleeves.",
+        "similarity": 0.21739187509478625
+    },
+    {
+        "article_id": "630777017",
+        "detail_desc": "Straight-style T-shirt in soft cotton jersey with ribbing around the neckline.",
+        "similarity": 0.5665772245355802
+    },
+    {
+        "article_id": "658329032",
+        "detail_desc": "Short-sleeved polo shirt in stretch cotton jersey with a collar and button placket. Slim fit.",
+        "similarity": 0.2055006375223102
+    },
+    {
+        "article_id": "699923114",
+        "detail_desc": "T-shirt in soft, printed cotton jersey.",
+        "similarity": 0.2249296047579838
+    },
+    {
+        "article_id": "570003075",
+        "detail_desc": "V-neck T-shirt in soft cotton jersey.",
+        "similarity": 0.30245742671021625
     },
     {
         "article_id": "716348002",
         "detail_desc": "Short T-shirt dress in soft viscose jersey.",
-        "similarity": 0.3225994714044241
+        "similarity": 0.38556915037534856
     },
     {
-        "article_id": "714620005",
-        "detail_desc": "Short dress in a patterned viscose weave with a collar and buttons down the front. Long sleeves with narrow elastication at the cuffs, a seam at the waist and a gently flared skirt. Unlined.",
-        "similarity": 0.28518294606087097
+        "article_id": "570004111",
+        "detail_desc": "Short-sleeved polo shirt in soft jersey with a collar and button placket.",
+        "similarity": 0.24224925134801273
     },
     {
-        "article_id": "720635008",
-        "detail_desc": "Short dress in a patterned viscose weave with a V-neck, wrapover front with ties at the waist and short sleeves.",
-        "similarity": 0.20556851251256458
+        "article_id": "570004109",
+        "detail_desc": "Short-sleeved polo shirt in soft jersey with a collar and button placket.",
+        "similarity": 0.24224925134801273
     },
     {
-        "article_id": "212629048",
-        "detail_desc": "Long, sleeveless dress in jersey with narrow shoulder straps and an elasticated seam at the waist. Unlined.",
-        "similarity": 0.38764459839979126
+        "article_id": "570002083",
+        "detail_desc": "Round-necked T-shirt in soft jersey.",
+        "similarity": 0.2238106907309886
     },
     {
-        "article_id": "709987008",
-        "detail_desc": "Short, V-neck dress in woven fabric with a small stand-up collar and buttons at the top. Long sleeves with wide, buttoned cuffs, an elasticated seam at the waist and a decorative belt with a metal buckle.",
-        "similarity": 0.2508453107738696
+        "article_id": "570003076",
+        "detail_desc": "V-neck T-shirt in soft cotton jersey.",
+        "similarity": 0.30245742671021625
     },
     {
-        "article_id": "212629047",
-        "detail_desc": "Long, sleeveless dress in jersey with narrow shoulder straps and an elasticated seam at the waist. Unlined.",
-        "similarity": 0.38764459839979126
+        "article_id": "658329021",
+        "detail_desc": "Short-sleeved polo shirt in stretch cotton jersey with a collar and button placket. Slim fit.",
+        "similarity": 0.2055006375223102
     },
     {
-        "article_id": "509210020",
-        "detail_desc": "Long top in soft, ribbed jersey with long sleeves, high slits in the sides and a rounded, raw-edge hem. Longer at the back.",
-        "similarity": 0.23139299823570567
+        "article_id": "649439001",
+        "detail_desc": "T-shirt in a jacquard-knit cotton blend with short sleeves, an open chest pocket and slits in the sides.",
+        "similarity": 0.21063965483972963
     },
     {
-        "article_id": "316441038",
-        "detail_desc": "Long-sleeved top in soft jersey.",
-        "similarity": 0.24844742485904528
+        "article_id": "570003072",
+        "detail_desc": "V-neck T-shirt in soft cotton jersey.",
+        "similarity": 0.30245742671021625
     },
     {
-        "article_id": "708492004",
-        "detail_desc": "Wide, sleeveless dress in softly draping jersey. Unlined.",
-        "similarity": 0.2391221736923882
+        "article_id": "393993002",
+        "detail_desc": "Padded jacket in a slightly longer style with a stand-up collar and faux fur-trimmed hood. Zip down the front, a concealed drawstring at the waist, and zipped side pockets. Lined.",
+        "similarity": 0.21234735373162195
     },
     {
-        "article_id": "681174015",
-        "detail_desc": "Short dress in woven fabric with a collar, buttons down the front and a yoke at the back. Narrow, detachable belt at the waist and long sleeves with buttoned cuffs. Unlined.",
-        "similarity": 0.29774121917253615
+        "article_id": "570004118",
+        "detail_desc": "Short-sleeved polo shirt in soft jersey with a collar and button placket.",
+        "similarity": 0.24224925134801273
     },
     {
-        "article_id": "550309001",
-        "detail_desc": "Straight-cut dress in sturdy jersey with 3/4-length sleeves and front pockets. Unlined.",
-        "similarity": 0.2334772199931145
+        "article_id": "570003079",
+        "detail_desc": "V-neck T-shirt in soft cotton jersey.",
+        "similarity": 0.30245742671021625
     },
     {
-        "article_id": "676979011",
-        "detail_desc": "Short, fitted, sleeveless dress in soft jersey.",
-        "similarity": 0.3042737489202692
+        "article_id": "570002080",
+        "detail_desc": "Round-necked T-shirt in soft jersey.",
+        "similarity": 0.2238106907309886
     },
     {
-        "article_id": "681180035",
-        "detail_desc": "Short, sleeveless dress in sturdy jersey with a low-cut back, seam at the waist and flared skirt. The polyester content of the dress is partly recycled.",
-        "similarity": 0.30288399190300047
+        "article_id": "624486003",
+        "detail_desc": "Short, fitted top in ribbed cotton jersey with short sleeves.",
+        "similarity": 0.21739187509478625
     },
     {
-        "article_id": "596400007",
-        "detail_desc": "Long-sleeved top in soft cotton jersey.",
-        "similarity": 0.23205035324924245
+        "article_id": "699923097",
+        "detail_desc": "T-shirt in soft, printed cotton jersey.",
+        "similarity": 0.2249296047579838
     },
     {
-        "article_id": "316441039",
-        "detail_desc": "Long-sleeved top in soft jersey.",
-        "similarity": 0.24844742485904528
+        "article_id": "570004009",
+        "detail_desc": "Short-sleeved polo shirt in soft jersey with a collar and button placket.",
+        "similarity": 0.24224925134801273
     },
     {
-        "article_id": "663472005",
-        "detail_desc": "Calf-length dress in an airy, patterned weave with an opening and narrow ties at the top, 3/4-length sleeves with narrow elastication and a frill at the cuffs, a smocked seam at the waist and a flared skirt. Jersey inner dress.",
-        "similarity": 0.2488918480303856
+        "article_id": "570004112",
+        "detail_desc": "Short-sleeved polo shirt in soft jersey with a collar and button placket.",
+        "similarity": 0.24224925134801273
     },
     {
-        "article_id": "301656026",
-        "detail_desc": "Long, straight-cut shirt in soft Tencel\u2122 lyocell denim with a collar and buttons down the front. Chest pockets with a pleat, and long sleeves with buttoned cuffs.",
-        "similarity": 0.20328449399043083
+        "article_id": "570002085",
+        "detail_desc": "Round-necked T-shirt in soft jersey.",
+        "similarity": 0.2238106907309886
     },
     {
-        "article_id": "731146001",
-        "detail_desc": "Fitted dress in cotton jersey with long sleeves.",
-        "similarity": 0.5906481391205116
+        "article_id": "570004120",
+        "detail_desc": "Short-sleeved polo shirt in soft jersey with a collar and button placket.",
+        "similarity": 0.24224925134801273
+    },
+    {
+        "article_id": "624486078",
+        "detail_desc": "Short, fitted top in ribbed cotton jersey with short sleeves.",
+        "similarity": 0.21739187509478625
+    },
+    {
+        "article_id": "654410024",
+        "detail_desc": "Short-sleeved polo shirt in cotton piqu\u00e9 with a ribbed collar and button placket.",
+        "similarity": 0.20403823440581337
+    },
+    {
+        "article_id": "554598062",
+        "detail_desc": "T-shirt in soft jersey with a round neck, short sleeves with sewn-in turn-ups, and a rounded hem.",
+        "similarity": 0.23751628577958755
+    },
+    {
+        "article_id": "570003069",
+        "detail_desc": "V-neck T-shirt in soft cotton jersey.",
+        "similarity": 0.30245742671021625
+    },
+    {
+        "article_id": "624486049",
+        "detail_desc": "Short, fitted top in ribbed cotton jersey with short sleeves.",
+        "similarity": 0.21739187509478625
+    },
+    {
+        "article_id": "654410031",
+        "detail_desc": "Short-sleeved polo shirt in cotton piqu\u00e9 with a ribbed collar and button placket.",
+        "similarity": 0.20403823440581337
+    },
+    {
+        "article_id": "570002094",
+        "detail_desc": "Round-necked T-shirt in soft jersey.",
+        "similarity": 0.2238106907309886
+    },
+    {
+        "article_id": "697060014",
+        "detail_desc": "Longer-style top in a viscose cr\u00eape weave with a round neckline and an opening with a concealed button at the back of the neck. Short sleeves and a rounded hem.",
+        "similarity": 0.3560664844494591
+    },
+    {
+        "article_id": "554598070",
+        "detail_desc": "T-shirt in soft jersey with a round neck, short sleeves with sewn-in turn-ups, and a rounded hem.",
+        "similarity": 0.23751628577958755
+    },
+    {
+        "article_id": "570004115",
+        "detail_desc": "Short-sleeved polo shirt in soft jersey with a collar and button placket.",
+        "similarity": 0.24224925134801273
+    },
+    {
+        "article_id": "711053027",
+        "detail_desc": "Long T-shirt in soft jersey made from a cotton blend with short sleeves with sewn-in turn-ups.",
+        "similarity": 0.238009341844252
+    },
+    {
+        "article_id": "554598067",
+        "detail_desc": "T-shirt in soft jersey with a round neck, short sleeves with sewn-in turn-ups, and a rounded hem.",
+        "similarity": 0.23751628577958755
+    },
+    {
+        "article_id": "570003001",
+        "detail_desc": "V-neck T-shirt in soft cotton jersey.",
+        "similarity": 0.30245742671021625
+    },
+    {
+        "article_id": "624486076",
+        "detail_desc": "Short, fitted top in ribbed cotton jersey with short sleeves.",
+        "similarity": 0.21739187509478625
+    },
+    {
+        "article_id": "570003081",
+        "detail_desc": "V-neck T-shirt in soft cotton jersey.",
+        "similarity": 0.30245742671021625
+    },
+    {
+        "article_id": "570002088",
+        "detail_desc": "Round-necked T-shirt in soft jersey.",
+        "similarity": 0.2238106907309886
+    },
+    {
+        "article_id": "739529002",
+        "detail_desc": "T-shirt in slub linen jersey with a round neckline, short sleeves and straight-cut hem.",
+        "similarity": 0.23178077780942213
+    },
+    {
+        "article_id": "554598081",
+        "detail_desc": "T-shirt in soft jersey with a round neck, short sleeves with sewn-in turn-ups, and a rounded hem.",
+        "similarity": 0.23751628577958755
+    },
+    {
+        "article_id": "624486064",
+        "detail_desc": "Short, fitted top in ribbed cotton jersey with short sleeves.",
+        "similarity": 0.21739187509478625
+    },
+    {
+        "article_id": "570003054",
+        "detail_desc": "V-neck T-shirt in soft cotton jersey.",
+        "similarity": 0.30245742671021625
+    },
+    {
+        "article_id": "570004010",
+        "detail_desc": "Short-sleeved polo shirt in soft jersey with a collar and button placket.",
+        "similarity": 0.24224925134801273
+    },
+    {
+        "article_id": "711053026",
+        "detail_desc": "Long T-shirt in soft jersey made from a cotton blend with short sleeves with sewn-in turn-ups.",
+        "similarity": 0.238009341844252
+    },
+    {
+        "article_id": "624486061",
+        "detail_desc": "Short, fitted top in ribbed cotton jersey with short sleeves.",
+        "similarity": 0.21739187509478625
+    },
+    {
+        "article_id": "554598063",
+        "detail_desc": "T-shirt in soft jersey with a round neck, short sleeves with sewn-in turn-ups, and a rounded hem.",
+        "similarity": 0.23751628577958755
+    },
+    {
+        "article_id": "624486069",
+        "detail_desc": "Short, fitted top in ribbed cotton jersey with short sleeves.",
+        "similarity": 0.21739187509478625
+    },
+    {
+        "article_id": "554598065",
+        "detail_desc": "T-shirt in soft jersey with a round neck, short sleeves with sewn-in turn-ups, and a rounded hem.",
+        "similarity": 0.23751628577958755
+    },
+    {
+        "article_id": "719203009",
+        "detail_desc": "Wide, straight-style jumper in a fine-knit viscose blend with a slightly wider neckline, low dropped shoulders, long, close-fitting sleeves and a gently rounded hem. Longer at the back.",
+        "similarity": 0.21474407621082298
+    },
+    {
+        "article_id": "711053009",
+        "detail_desc": "Long T-shirt in soft jersey made from a cotton blend with short sleeves with sewn-in turn-ups.",
+        "similarity": 0.238009341844252
+    },
+    {
+        "article_id": "570003070",
+        "detail_desc": "V-neck T-shirt in soft cotton jersey.",
+        "similarity": 0.30245742671021625
+    },
+    {
+        "article_id": "570004119",
+        "detail_desc": "Short-sleeved polo shirt in soft jersey with a collar and button placket.",
+        "similarity": 0.24224925134801273
+    },
+    {
+        "article_id": "554598083",
+        "detail_desc": "T-shirt in soft jersey with a round neck, short sleeves with sewn-in turn-ups, and a rounded hem.",
+        "similarity": 0.23751628577958755
+    },
+    {
+        "article_id": "554598066",
+        "detail_desc": "T-shirt in soft jersey with a round neck, short sleeves with sewn-in turn-ups, and a rounded hem.",
+        "similarity": 0.23751628577958755
+    },
+    {
+        "article_id": "554598071",
+        "detail_desc": "T-shirt in soft jersey with a round neck, short sleeves with sewn-in turn-ups, and a rounded hem.",
+        "similarity": 0.23751628577958755
+    },
+    {
+        "article_id": "570004105",
+        "detail_desc": "Short-sleeved polo shirt in soft jersey with a collar and button placket.",
+        "similarity": 0.24224925134801273
+    },
+    {
+        "article_id": "554598080",
+        "detail_desc": "T-shirt in soft jersey with a round neck, short sleeves with sewn-in turn-ups, and a rounded hem.",
+        "similarity": 0.23751628577958755
+    },
+    {
+        "article_id": "711053007",
+        "detail_desc": "Long T-shirt in soft jersey made from a cotton blend with short sleeves with sewn-in turn-ups.",
+        "similarity": 0.238009341844252
+    },
+    {
+        "article_id": "649439007",
+        "detail_desc": "T-shirt in a jacquard-knit cotton blend with short sleeves, an open chest pocket and slits in the sides.",
+        "similarity": 0.21063965483972963
+    },
+    {
+        "article_id": "711053005",
+        "detail_desc": "Long T-shirt in soft jersey made from a cotton blend with short sleeves with sewn-in turn-ups.",
+        "similarity": 0.238009341844252
+    },
+    {
+        "article_id": "624486074",
+        "detail_desc": "Short, fitted top in ribbed cotton jersey with short sleeves.",
+        "similarity": 0.21739187509478625
+    },
+    {
+        "article_id": "554598038",
+        "detail_desc": "T-shirt in soft jersey with a round neck, short sleeves with sewn-in turn-ups, and a rounded hem.",
+        "similarity": 0.23751628577958755
+    },
+    {
+        "article_id": "711053003",
+        "detail_desc": "Long T-shirt in soft jersey made from a cotton blend with short sleeves with sewn-in turn-ups.",
+        "similarity": 0.238009341844252
+    },
+    {
+        "article_id": "570004108",
+        "detail_desc": "Short-sleeved polo shirt in soft jersey with a collar and button placket.",
+        "similarity": 0.24224925134801273
+    },
+    {
+        "article_id": "624486001",
+        "detail_desc": "Short, fitted top in ribbed cotton jersey with short sleeves.",
+        "similarity": 0.21739187509478625
+    },
+    {
+        "article_id": "570004106",
+        "detail_desc": "Short-sleeved polo shirt in soft jersey with a collar and button placket.",
+        "similarity": 0.24224925134801273
+    },
+    {
+        "article_id": "554598086",
+        "detail_desc": "T-shirt in soft jersey with a round neck, short sleeves with sewn-in turn-ups, and a rounded hem.",
+        "similarity": 0.23751628577958755
     },
     {
         "article_id": "716348008",
         "detail_desc": "Short T-shirt dress in soft viscose jersey.",
-        "similarity": 0.3225994714044241
+        "similarity": 0.38556915037534856
     },
     {
-        "article_id": "685468001",
-        "detail_desc": "Short dress in soft jersey with a round neckline, long sleeves, seam at the waist and bell-shaped skirt. Unlined.",
-        "similarity": 0.3020799732427166
+        "article_id": "554598001",
+        "detail_desc": "T-shirt in soft jersey with a round neck, short sleeves with sewn-in turn-ups, and a rounded hem.",
+        "similarity": 0.23751628577958755
     },
     {
-        "article_id": "637255001",
-        "detail_desc": "Straight-cut dress in stretch jersey with a round neckline and 3/4-length sleeves. Unlined.",
-        "similarity": 0.2328307746039273
+        "article_id": "630323041",
+        "detail_desc": "T-shirt in printed cotton jersey.",
+        "similarity": 0.23529652472362034
     },
     {
-        "article_id": "740832002",
-        "detail_desc": "Short, fitted, off-the-shoulder dress in soft cotton jersey with decorative metal eyelets around the neckline and long sleeves.",
-        "similarity": 0.29322134776267395
+        "article_id": "554598047",
+        "detail_desc": "T-shirt in soft jersey with a round neck, short sleeves with sewn-in turn-ups, and a rounded hem.",
+        "similarity": 0.23751628577958755
     },
     {
-        "article_id": "685017007",
-        "detail_desc": "Short dress in soft, patterned viscose with a V-neck and wrapover front with ties at the waist and long sleeves. Unlined.",
-        "similarity": 0.3544971253375804
+        "article_id": "719203008",
+        "detail_desc": "Wide, straight-style jumper in a fine-knit viscose blend with a slightly wider neckline, low dropped shoulders, long, close-fitting sleeves and a gently rounded hem. Longer at the back.",
+        "similarity": 0.21474407621082298
     },
     {
-        "article_id": "710676001",
-        "detail_desc": "Short, fitted dress in jersey with a square neckline, an opening with a decorative tie detail at the front and long sleeves.",
-        "similarity": 0.30824966737872217
+        "article_id": "570003002",
+        "detail_desc": "V-neck T-shirt in soft cotton jersey.",
+        "similarity": 0.30245742671021625
     },
     {
-        "article_id": "702208004",
-        "detail_desc": "Calf-length, fitted dress in soft cotton jersey with a polo neck and long sleeves.",
-        "similarity": 0.37641933626342694
+        "article_id": "570002001",
+        "detail_desc": "Round-necked T-shirt in soft jersey.",
+        "similarity": 0.2238106907309886
     },
     {
-        "article_id": "316441033",
-        "detail_desc": "Long-sleeved top in soft jersey.",
-        "similarity": 0.24844742485904528
+        "article_id": "554598003",
+        "detail_desc": "T-shirt in soft jersey with a round neck, short sleeves with sewn-in turn-ups, and a rounded hem.",
+        "similarity": 0.23751628577958755
     },
     {
-        "article_id": "660599002",
-        "detail_desc": "Long cardigan in a soft, fine knit with long sleeves and ribbing at the cuffs and hem. No buttons.",
-        "similarity": 0.282069697069145
+        "article_id": "570002051",
+        "detail_desc": "Round-necked T-shirt in soft jersey.",
+        "similarity": 0.2238106907309886
     },
     {
-        "article_id": "660599016",
-        "detail_desc": "Long cardigan in a soft, fine knit with long sleeves and ribbing at the cuffs and hem. No buttons.",
-        "similarity": 0.282069697069145
+        "article_id": "570002048",
+        "detail_desc": "Round-necked T-shirt in soft jersey.",
+        "similarity": 0.2238106907309886
     },
     {
-        "article_id": "669893004",
-        "detail_desc": "Long cardigan in a soft, loose knit with dropped shoulders and long, wide sleeves with ribbed cuffs. No buttons.",
-        "similarity": 0.24730626704327538
+        "article_id": "570002002",
+        "detail_desc": "Round-necked T-shirt in soft jersey.",
+        "similarity": 0.2238106907309886
     },
     {
-        "article_id": "669893002",
-        "detail_desc": "Long cardigan in a soft, loose knit with dropped shoulders and long, wide sleeves with ribbed cuffs. No buttons.",
-        "similarity": 0.24730626704327538
+        "article_id": "641699001",
+        "detail_desc": "Straight-style, cold shoulder blouse in stripe-print poplin with embroidery, narrow shoulder straps and short sleeves that are elasticated at the top.",
+        "similarity": 0.24857412457410188
+    },
+    {
+        "article_id": "411413002",
+        "detail_desc": "Cropped T-shirt in jersey with a chest pocket and short sleeves with sewn-in turn-ups.",
+        "similarity": 0.22871230174576868
+    },
+    {
+        "article_id": "624486051",
+        "detail_desc": "Short, fitted top in ribbed cotton jersey with short sleeves.",
+        "similarity": 0.21739187509478625
+    },
+    {
+        "article_id": "721683009",
+        "detail_desc": "Round-necked T-shirt in stretch cotton jersey.",
+        "similarity": 0.20428451930990632
+    },
+    {
+        "article_id": "719203007",
+        "detail_desc": "Wide, straight-style jumper in a fine-knit viscose blend with a slightly wider neckline, low dropped shoulders, long, close-fitting sleeves and a gently rounded hem. Longer at the back.",
+        "similarity": 0.21474407621082298
+    },
+    {
+        "article_id": "649440041",
+        "detail_desc": "T-shirt in printed cotton jersey.",
+        "similarity": 0.23529652472362034
+    },
+    {
+        "article_id": "474123018",
+        "detail_desc": "Top in washed jersey with narrow shoulder straps and deep armholes in a wide style with a decorative seam at the back. Raw-edge, rounded hem that is short at the front and longer at the back.",
+        "similarity": 0.28626545212968524
+    },
+    {
+        "article_id": "474123016",
+        "detail_desc": "Top in washed jersey with narrow shoulder straps and deep armholes in a wide style with a decorative seam at the back. Raw-edge, rounded hem that is short at the front and longer at the back.",
+        "similarity": 0.28626545212968524
+    },
+    {
+        "article_id": "341782032",
+        "detail_desc": "T-shirt in soft jersey with raw edges.",
+        "similarity": 0.21199572712481454
+    },
+    {
+        "article_id": "341782018",
+        "detail_desc": "T-shirt in soft jersey with raw edges.",
+        "similarity": 0.21199572712481454
+    },
+    {
+        "article_id": "341782043",
+        "detail_desc": "T-shirt in soft jersey with raw edges.",
+        "similarity": 0.21199572712481454
+    },
+    {
+        "article_id": "699923100",
+        "detail_desc": "T-shirt in soft, printed cotton jersey.",
+        "similarity": 0.2249296047579838
     },
     {
         "article_id": "736049002",
         "detail_desc": "Short, straight-style dress in lightweight sweatshirt fabric with long sleeves and ribbing around the neckline and cuffs.",
-        "similarity": 0.3079104850443532
-    },
-    {
-        "article_id": "212629051",
-        "detail_desc": "Long, sleeveless dress in jersey with narrow shoulder straps and an elasticated seam at the waist. Unlined.",
-        "similarity": 0.38764459839979126
+        "similarity": 0.3855051802340116
     },
     {
         "article_id": "736049005",
         "detail_desc": "Short, straight-style dress in lightweight sweatshirt fabric with long sleeves and ribbing around the neckline and cuffs.",
-        "similarity": 0.3079104850443532
+        "similarity": 0.3855051802340116
     },
     {
         "article_id": "736049004",
         "detail_desc": "Short, straight-style dress in lightweight sweatshirt fabric with long sleeves and ribbing around the neckline and cuffs.",
-        "similarity": 0.3079104850443532
-    },
-    {
-        "article_id": "702208002",
-        "detail_desc": "Calf-length, fitted dress in soft cotton jersey with a polo neck and long sleeves.",
-        "similarity": 0.37641933626342694
-    },
-    {
-        "article_id": "706509001",
-        "detail_desc": "Short, fitted dress in soft jersey with a round neckline and long sleeves.",
-        "similarity": 0.46015779659884853
+        "similarity": 0.3855051802340116
     },
     {
         "article_id": "736049001",
         "detail_desc": "Short, straight-style dress in lightweight sweatshirt fabric with long sleeves and ribbing around the neckline and cuffs.",
-        "similarity": 0.3079104850443532
+        "similarity": 0.3855051802340116
     },
     {
-        "article_id": "496762020",
-        "detail_desc": "Short dress in soft jersey with a V-neck, narrow, adjustable shoulder straps, seam at the waist and flared skirt.",
-        "similarity": 0.21398258344680007
-    },
-    {
-        "article_id": "477507009",
-        "detail_desc": "Short, straight-cut dress in jersey made from a cotton blend with short sleeves.",
-        "similarity": 0.22802945280416695
-    },
-    {
-        "article_id": "477507001",
-        "detail_desc": "Short, straight-cut dress in jersey made from a cotton blend with short sleeves.",
-        "similarity": 0.22802945280416695
+        "article_id": "707777006",
+        "detail_desc": "Short, boxy-style jacket in washed denim with a collar, buttons down the front, dropped shoulders and long sleeves with buttoned cuffs. Flap chest pockets with a button and side pockets.",
+        "similarity": 0.2929915576535587
     },
     {
         "article_id": "681176023",
         "detail_desc": "Short, fitted dress in soft jersey with short sleeves.",
-        "similarity": 0.2928573293040289
+        "similarity": 0.23420467571964276
     },
     {
-        "article_id": "747015002",
-        "detail_desc": "Short jersey dress with narrow shoulder straps, a seam at the waist and a flared skirt.",
-        "similarity": 0.23808602980092494
-    },
-    {
-        "article_id": "709338002",
-        "detail_desc": "Short dress in a patterned viscose weave with a small stand-up collar with a button at the back of the neck and an opening front and back. Long sleeves with elastication at the cuffs and a seam with a flounce at the hem. Unlined.",
-        "similarity": 0.2571409805893565
-    },
-    {
-        "article_id": "747015001",
-        "detail_desc": "Short jersey dress with narrow shoulder straps, a seam at the waist and a flared skirt.",
-        "similarity": 0.23808602980092494
-    },
-    {
-        "article_id": "681180037",
-        "detail_desc": "Short, sleeveless dress in sturdy jersey with a low-cut back, seam at the waist and flared skirt. The polyester content of the dress is partly recycled.",
-        "similarity": 0.30288399190300047
-    },
-    {
-        "article_id": "633977001",
-        "detail_desc": "Short, V-neck dress in stretch jersey with a wrapover front with ties at one side, and long sleeves.",
-        "similarity": 0.3624741226380497
-    },
-    {
-        "article_id": "633977002",
-        "detail_desc": "Short, V-neck dress in stretch jersey with a wrapover front with ties at one side, and long sleeves.",
-        "similarity": 0.3624741226380497
-    },
-    {
-        "article_id": "633977004",
-        "detail_desc": "Short, V-neck dress in stretch jersey with a wrapover front with ties at one side, and long sleeves.",
-        "similarity": 0.3624741226380497
-    },
-    {
-        "article_id": "729095001",
-        "detail_desc": "Dress in a cr\u00eape weave with a V-neck, pleats at the front, long, cuffed sleeves and a narrow, detachable tie belt at the waist. Unlined.",
-        "similarity": 0.2760362917814088
-    },
-    {
-        "article_id": "719946007",
-        "detail_desc": "Knee-length dress in a viscose cr\u00eape weave with a small stand-up collar and buttons down the front. Long sleeves with buttoned cuffs and a narrow, detachable tie belt at the waist. Unlined.",
-        "similarity": 0.24950784082134286
-    },
-    {
-        "article_id": "734426002",
-        "detail_desc": "Calf-length dress in airy satin with notch lapels, buttons down the front and a yoke at the back. Flap chest pockets, a drawstring at the waist and long sleeves with buttoned cuffs. Unlined.",
-        "similarity": 0.24244780939757782
-    },
-    {
-        "article_id": "730153008",
-        "detail_desc": "Short dress in an airy weave with pin-tucks at the top and an opening with a button at the back of the neck. Gathered seam at the waist and a gently flared skirt. Lace sections at the cuffs and hem. Jersey inner dress.",
-        "similarity": 0.23945290417314402
-    },
-    {
-        "article_id": "671217013",
-        "detail_desc": "Short, fitted dress in sturdy, patterned jersey with short sleeves and ribbing around the neckline.",
-        "similarity": 0.2013056091421323
-    },
-    {
-        "article_id": "691177005",
-        "detail_desc": "Short shirt dress in softly draping woven fabric with a sheen. Collar, concealed buttons down the front and a detachable tie belt at the waist. Long sleeves with buttoned cuffs, and a rounded hem. Unlined.",
-        "similarity": 0.23898053886928824
-    },
-    {
-        "article_id": "688474005",
-        "detail_desc": "Fitted dress in a soft rib knit with a V-neck front and back and long raglan sleeves.",
-        "similarity": 0.3740405446912279
-    },
-    {
-        "article_id": "301656029",
-        "detail_desc": "Long, straight-cut shirt in soft Tencel\u2122 lyocell denim with a collar and buttons down the front. Chest pockets with a pleat, and long sleeves with buttoned cuffs.",
-        "similarity": 0.20328449399043083
+        "article_id": "741117006",
+        "detail_desc": "Calf-length, straight-style tunic in a pleated weave with buttons down the front and narrow ties at the waist. Long raglan sleeves with narrow, buttoned cuffs, and slits in the sides.",
+        "similarity": 0.22740536089430485
     }
 ]
